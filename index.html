@@ -12,16 +12,12 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            scroll-behavior: smooth;
         }
         header {
             background-color: #0077cc;
             color: #fff;
             padding: 20px 0;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
         header h1 {
             margin: 0;
@@ -34,27 +30,12 @@
             color: #fff;
             text-decoration: none;
         }
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: url('https://via.placeholder.com/1200x300') no-repeat center center;
-            background-size: cover;
-            color: #fff;
-        }
-        .hero h2 {
-            margin: 0;
-            font-size: 2em;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-        }
         nav {
             display: flex;
             justify-content: center;
             background-color: #0077cc;
             margin-top: 20px;
             padding: 10px 0;
-            position: sticky;
-            top: 70px;
-            z-index: 999;
         }
         nav a {
             color: #fff;
@@ -83,11 +64,6 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
         h2 {
             color: #0077cc;
@@ -99,47 +75,10 @@
         ul li {
             margin: 5px 0;
         }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .skill-item {
-            flex: 1 1 45%;
-            margin: 10px;
-            background: #f1f1f1;
-            padding: 15px;
-            border-radius: 8px;
-        }
-        footer {
-            background-color: #0077cc;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 20px;
-        }
-        .footer-links a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .resume-button {
-            background-color: #0077cc;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .resume-button:hover {
-            background-color: #005fa3;
-        }
     </style>
     <script>
         function openTab(tabName) {
-            var i, tabcontent, tablinks;
+            var i, tabcontent;
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].classList.remove("active");
@@ -154,15 +93,8 @@
     <header>
         <h1>Brett Rosenberg</h1>
         <p>Email: <a href="mailto:brettr7388@gmail.com">brettr7388@gmail.com</a> | Phone: 954-249-3388</p>
-        <p><a href="https://www.linkedin.com/in/brett-rosenberg7388">LinkedIn Profile</a></p>
+        <p><a href="https://www.linkedin.com/in/brett-rosenberg7388">LinkedIn Profile</a> | <a href="https://brettr7388.github.io/mywebsite/">My Portfolio Website</a></p>
     </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Welcome to My Professional Profile</h2>
-        <p>Your next Software Engineer with a passion for development and innovation.</p>
-        <a href="resume.pdf" class="resume-button" download>Download Resume</a>
-    </section>
 
     <!-- Navigation Tabs -->
     <nav>
@@ -181,41 +113,66 @@
             <p>Expected Graduation: May 2026 | GPA: 3.8, Dean’s List</p>
             <ul>
                 <li>Campus Involvement: HACK@UCF, Tennis Club, EXCEL, COMPASS, Internship panel speaker</li>
-                <li>Relevant Coursework: Systems Software, Object Oriented Programming, Computer Science 2, Calculus 2, Physics, Discrete</li>
+                <li>Relevant Coursework: Systems Software, Object-Oriented Programming, Computer Science 2, Calculus 2, Physics, Discrete</li>
             </ul>
         </section>
 
         <!-- Experience Tab Content -->
         <section id="experience" class="tab-content">
             <h2>Relevant Experience</h2>
-            <!-- Experience details as before -->
+            <h3>Roblox Games | Designer/Scripter</h3>
+            <p>December 2022 – Present</p>
+            <ul>
+                <li>Architect and deploy complex adventure games on Roblox using Lua in Roblox Studio, integrating advanced algorithms for dynamic quests, multi-level challenges, in-game monetization, player animations, and GUIs.</li>
+                <li>Collaborated with a co-designer on game design and strategy, optimizing user engagement through iterative testing and feedback, resulting in increased player retention rates.</li>
+                <li>Engineered successful marketing strategies that drive over 185,000 unique visitors and maintain an active user base of 2,000+ through analytics, community building, and targeted user acquisition campaigns.</li>
+            </ul>
+            <h3>PEDIATRIX | Intern</h3>
+            <p>May 2023 – August 2023</p>
+            <ul>
+                <li>Collaborated within a cross-functional team of 5 engineers, following the adoption of Test-Driven Development (TDD) in Python projects using Visual Studio Code, which resulted in reduction in post-deployment bugs and streamlined version control using GitHub.</li>
+                <li>Analyzed and corrected a database of over 10,000 outdated emails using SQL queries and Linux scripts, improving communication accuracy and reducing bounce rates.</li>
+                <li>Acquired hands-on experience with Docker for containerizing applications in a DevOps context.</li>
+                <li>Managed and resolved over 50 technical support tickets using ServiceNow, focusing on troubleshooting software issues and providing end-user training.</li>
+            </ul>
         </section>
 
         <!-- Campus Involvement Tab Content -->
         <section id="involvement" class="tab-content">
             <h2>Campus Involvement</h2>
-            <!-- Campus involvement details as before -->
+            <h3>UCF Research | Undergraduate CS Department Researcher</h3>
+            <p>May 2024 – Present</p>
+            <ul>
+                <li>Design and implement machine learning models, including regression models, decision trees, and XGBoost algorithms, in Python (VS Code), leveraging a dataset of over 10,000 patients' records to identify key risk factors.</li>
+                <li>Presented technical findings and data-driven insights to Advent Health executive leadership, directly influencing strategic decision-making for diabetes care and predictive modeling.</li>
+            </ul>
+            <h3>UCF Paid Mentor | EXCEL Program Mentor</h3>
+            <p>April 2024 – Present</p>
+            <ul>
+                <li>Mentored over 40+ undecided freshmen on selecting a STEM major.</li>
+                <li>Provided personalized guidance on the benefits of pursuing a computer science major.</li>
+                <li>Organized and coordinated 3+ social and networking events for over 100 incoming STEM students.</li>
+            </ul>
+            <h3>UCF Teaching Assistant | Concepts in Computer Science</h3>
+            <p>August 2024 – Present</p>
+            <ul>
+                <li>Evaluated and graded assignments, projects, labs, and exams for over 700+ students, ensuring consistency and fairness in assessment.</li>
+                <li>Provided detailed feedback on coding assignments to help students improve their understanding of core coding concepts.</li>
+                <li>Assisted students in mastering Python programming fundamentals, including data structures, algorithms, and object-oriented design.</li>
+            </ul>
         </section>
 
         <!-- Skills Tab Content -->
         <section id="skills" class="tab-content">
             <h2>Skills</h2>
-            <div class="skills">
-                <div class="skill-item"><strong>Python</strong></div>
-                <div class="skill-item"><strong>C</strong></div>
-                <!-- Add more skill items -->
-            </div>
+            <ul>
+                <li><strong>Programming Languages:</strong> Python, C, Lua, Java, HTML</li>
+                <li><strong>Tools and Technologies:</strong> GitHub, Linux, Azure, Docker, Citrix, ServiceNow, Visual Studio Code, DevOps, Microsoft Word, PowerPoint, Excel, Website Design</li>
+                <li><strong>Machine Learning and Data Analysis:</strong> XGBoost, Regression Models, Decision Trees, Data Analysis</li>
+                <li><strong>Soft Skills:</strong> Mentoring, Team Leadership, Communication, Problem Solving, Adaptability, Time Management, Critical Thinking, Analytical Thinking, Collaboration</li>
+            </ul>
         </section>
     </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Brett Rosenberg. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="https://www.linkedin.com/in/brett-rosenberg7388">LinkedIn</a>
-            <a href="mailto:brettr7388@gmail.com">Email</a>
-        </div>
-    </footer>
 
 </body>
 </html>
