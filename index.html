@@ -31,6 +31,27 @@
         header p {
             margin: 5px 0;
         }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
         section {
             background-color: #fff;
             margin: 20px 0;
@@ -49,6 +70,21 @@
             margin: 5px 0;
         }
     </style>
+    <script>
+        function openTab(event, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByTagName("a");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
 </head>
 <body>
 
@@ -59,73 +95,89 @@
         <p><a href="https://www.linkedin.com/in/brett-rosenberg7388" style="color: #fff; text-decoration: none;">LinkedIn Profile</a></p>
     </header>
 
+    <!-- Navigation Tabs -->
+    <nav>
+        <a href="#" class="active" onclick="openTab(event, 'experience')">Experience</a>
+        <a href="#" onclick="openTab(event, 'education')">Education</a>
+        <a href="#" onclick="openTab(event, 'skills')">Skills</a>
+        <a href="#" onclick="openTab(event, 'certifications')">Certifications</a>
+    </nav>
+
     <!-- Main Content Section -->
     <div class="container">
+        <!-- Experience Section -->
+        <section id="experience" class="tab-content active">
+            <h2>Experience</h2>
+            <h3>University of Central Florida | Teaching Assistant</h3>
+            <p>Aug 2024 - Present (2 months)</p>
+            <p>Teaching Assistant for COP2500, Concepts in Computer Science.</p>
+            
+            <h3>Pediatrix Medical Group | Summer Intern</h3>
+            <p>May 2023 - Aug 2023 (4 months)</p>
+            <p>Leveraged expertise in Python, using Visual Studio Code, to collaborate effectively within a cross-functional team, driving scripted solutions with a focus on a test-driven development approach to assure optimal code quality...</p>
+            
+            <h3>CMO FUNDING | Marketing Manager</h3>
+            <p>Jun 2022 - Aug 2022 (3 months)</p>
+            <p>Assisted with addressing the organization’s information technology needs, focusing on creating and maintaining the company website, ensuring it met organizational and user needs...</p>
+            
+            <h3>Castle Group | Intern</h3>
+            <p>Jun 2021 - Aug 2021 (3 months)</p>
+            <p>Processed ownership information into accounting software, assigned fees into new residents' accounts...</p>
+            
+            <h3>Coconut Creek Automall | File Manager</h3>
+            <p>Jun 2020 - Aug 2020 (3 months)</p>
+            <p>Organized the back-office paperwork, purged old information from previous customer files, demonstrated ability to work under little to no supervision...</p>
+            
+            <h3>Broward Health | Front Desk Attendant</h3>
+            <p>Dec 2019 - Mar 2020 (4 months)</p>
+            <p>Offered customer service support to patients and visitors, delivered flowers and gifts for patients, answered phone calls...</p>
+            
+            <h3>HCA Florida Westside Hospital | Volunteer</h3>
+            <p>Jun 2018 - Sep 2018 (4 months)</p>
+            <p>Offered customer service to patients and visitors. Checked in visitors and patients, unloaded boxes, and dedicated time in OR unit...</p>
+        </section>
+
         <!-- Education Section -->
-        <section>
+        <section id="education" class="tab-content">
             <h2>Education</h2>
-            <p><strong>University of Central Florida</strong> - Bachelor of Science in Computer Science</p>
-            <p>Expected Graduation: May 2026 | GPA: 3.8, Dean’s List</p>
-            <ul>
-                <li>Campus Involvement: HACK@UCF, Tennis Club, EXCEL, COMPASS, Internship panel speaker</li>
-                <li>Relevant Coursework: Systems Software, Object Oriented Programming, Computer Science 2, Calculus 2, Physics, Discrete</li>
-            </ul>
-        </section>
+            <h3>University of Central Florida</h3>
+            <p>Bachelor of Science in Computer Science (2022 - 2026)</p>
+            <p>Activities and societies: Varsity tennis for three years, National Honor Society, DECA...</p>
 
-        <!-- Relevant Experience Section -->
-        <section>
-            <h2>Relevant Experience</h2>
-            <h3>Roblox Games | Designer/Scripter</h3>
-            <p>December 2022 – Present</p>
-            <ul>
-                <li>Architected and deployed complex adventure games on Roblox using Lua in Roblox Studio.</li>
-                <li>Collaborated on game design and strategy, optimizing user engagement.</li>
-                <li>Engineered marketing strategies that drove over 185,000 unique visitors.</li>
-            </ul>
-            <h3>PEDIATRIX | Intern</h3>
-            <p>May 2023 – August 2023</p>
-            <ul>
-                <li>Collaborated within a cross-functional team of 5 engineers using TDD in Python projects.</li>
-                <li>Analyzed and corrected a database of over 10,000 outdated emails using SQL and Linux scripts.</li>
-                <li>Acquired hands-on experience with Docker for containerizing applications.</li>
-                <li>Managed and resolved over 50 technical support tickets using ServiceNow.</li>
-            </ul>
-        </section>
-
-        <!-- Campus Involvement Section -->
-        <section>
-            <h2>Campus Involvement</h2>
-            <h3>UCF Research | Undergraduate CS Department Researcher</h3>
-            <p>May 2024 – Present</p>
-            <ul>
-                <li>Designed and implemented machine learning models in Python, leveraging a dataset of over 10,000 patient records.</li>
-                <li>Presented technical findings to Advent Health executive leadership.</li>
-            </ul>
-            <h3>UCF Paid Mentor | EXCEL Program Mentor</h3>
-            <p>April 2024 – Present</p>
-            <ul>
-                <li>Mentored over 40+ undecided freshmen on selecting a STEM major.</li>
-                <li>Organized and coordinated 3+ social and networking events for STEM students.</li>
-            </ul>
-            <h3>UCF Teaching Assistant | Concepts in Computer Science</h3>
-            <p>August 2024 – Present</p>
-            <ul>
-                <li>Evaluated and graded assignments for over 700+ students, ensuring consistency.</li>
-                <li>Provided detailed feedback on coding assignments to help students improve.</li>
-            </ul>
+            <h3>Marjory Stoneman Douglas High School</h3>
+            <p>High School Diploma (2018 - 2022)</p>
+            <p>Activities and societies: Varsity tennis for three years, National Honor Society, DECA...</p>
         </section>
 
         <!-- Skills Section -->
-        <section>
+        <section id="skills" class="tab-content">
             <h2>Skills</h2>
             <ul>
-                <li><strong>Programming Languages:</strong> Python, C, Lua, Java</li>
-                <li><strong>Tools and Technologies:</strong> GitHub, Linux, Azure, Docker, Citrix, ServiceNow, Visual Studio Code, DevOps, Microsoft Word, PowerPoint, Excel, Website Design</li>
-                <li><strong>Machine Learning and Data Analysis:</strong> XGBoost, Regression Models, Decision Trees, Data Analysis</li>
-                <li><strong>Soft Skills:</strong> Mentoring, Team Leadership, Communication, Problem Solving, Adaptability, Time Management, Critical Thinking, Analytical Thinking, Collaboration</li>
+                <li>Programming Languages: Python, C, Lua, Java</li>
+                <li>Tools and Technologies: GitHub, Linux, Azure, Docker, Citrix, ServiceNow, Visual Studio Code, DevOps, Microsoft Word, PowerPoint, Excel, Website Design</li>
+                <li>Machine Learning and Data Analysis: XGBoost, Regression Models, Decision Trees, Data Analysis</li>
+                <li>Soft Skills: Mentoring, Team Leadership, Communication, Problem Solving, Adaptability, Time Management, Critical Thinking, Analytical Thinking, Collaboration</li>
+            </ul>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="tab-content">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Entrepreneurship and Small Business – U.S. v.2 (Issued Jan 2022)</li>
+                <li>QuickBooks Certification (Issued Apr 2021)</li>
+                <li>Excel 2016 Expert: Interpreting Data for Insights (Issued Feb 2018)</li>
+                <li>IC3 GS4 Spark (Issued May 2017)</li>
+                <li>Microsoft Word 2016 (Issued Dec 2016)</li>
+                <li>Microsoft PowerPoint (Issued Feb 2016)</li>
             </ul>
         </section>
     </div>
+
+    <script>
+        // Default to show the Experience tab content on page load
+        document.getElementById("experience").style.display = "block";
+    </script>
 
 </body>
 </html>
