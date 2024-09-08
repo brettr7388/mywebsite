@@ -6,10 +6,10 @@
     <title>Brett Rosenberg - College Profile</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f0f0f5;
             color: #333;
         }
         .container {
@@ -19,17 +19,23 @@
             padding: 20px;
         }
         header {
-            background-color: #0077cc;
+            background-color: #0056b3;
             color: #fff;
-            padding: 20px 0;
+            padding: 40px 0;
             text-align: center;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
         }
         header p {
             margin: 5px 0;
+            font-size: 1.2em;
+        }
+        header a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
         }
         nav {
             display: flex;
@@ -42,9 +48,10 @@
             padding: 15px 20px;
             text-decoration: none;
             text-align: center;
+            font-size: 1.1em;
         }
-        nav a:hover {
-            background-color: #555;
+        nav a:hover, nav a.active {
+            background-color: #0056b3;
         }
         .tab-content {
             display: none;
@@ -57,17 +64,26 @@
             margin: 20px 0;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            color: #0077cc;
+            color: #0056b3;
         }
         ul {
             list-style: none;
             padding: 0;
         }
         ul li {
-            margin: 5px 0;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        .about-me img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .about-me p {
+            font-size: 1.1em;
         }
     </style>
     <script>
@@ -92,49 +108,46 @@
     <header>
         <h1>Brett Rosenberg</h1>
         <p>Email: brettr7388@gmail.com | Phone: 954-249-3388</p>
-        <p><a href="https://www.linkedin.com/in/brett-rosenberg7388" style="color: #fff; text-decoration: none;">LinkedIn Profile</a></p>
+        <p><a href="https://www.linkedin.com/in/brett-rosenberg7388">LinkedIn Profile</a></p>
     </header>
 
     <!-- Navigation Tabs -->
     <nav>
-        <a href="#" class="active" onclick="openTab(event, 'experience')">Experience</a>
+        <a href="#" class="active" onclick="openTab(event, 'about')">About Me</a>
+        <a href="#" onclick="openTab(event, 'experience')">Experience</a>
         <a href="#" onclick="openTab(event, 'education')">Education</a>
         <a href="#" onclick="openTab(event, 'skills')">Skills</a>
+        <a href="#" onclick="openTab(event, 'projects')">Projects</a>
         <a href="#" onclick="openTab(event, 'certifications')">Certifications</a>
     </nav>
 
     <!-- Main Content Section -->
     <div class="container">
+        <!-- About Me Section -->
+        <section id="about" class="tab-content active">
+            <h2>About Me</h2>
+            <div class="about-me">
+                <img src="Brett Brett.jpg" alt="Brett Rosenberg's Picture">
+                <p>My name is Brett Rosenberg, and I am a Computer Science major. This will be my third year at UCF. I graduated from Marjory Stoneman Douglas High School in Parkland, Florida. My favorite class so far has been Computer Science 1. I love how this class built onto what we learned in Introduction to C Programming and continued our learning of the C program. My favorite professor is Arup Guha. He was my Computer Science 1 teacher and greatly helped me prepare for my foundation exam. I decided to get involved with the COMPASS program because I was once a COMPASS mentee when I first started here in 2022. I expect to contribute my knowledge of STEM and my experiences at UCF to incoming STEM students starting at UCF. The key to surviving college is to ask questions and not eat the dining hall food. I love hanging out with my friends, I am a huge sports fan – especially the NBA, and I have a cat.</p>
+            </div>
+        </section>
+
         <!-- Experience Section -->
-        <section id="experience" class="tab-content active">
+        <section id="experience" class="tab-content">
             <h2>Experience</h2>
             <h3>University of Central Florida | Teaching Assistant</h3>
             <p>Aug 2024 - Present (2 months)</p>
-            <p>Teaching Assistant for COP2500, Concepts in Computer Science.</p>
+            <p>Teaching Assistant for COP2500, Concepts in Computer Science. Responsible for grading assignments, providing feedback, and assisting students in mastering programming fundamentals in Python.</p>
             
             <h3>Pediatrix Medical Group | Summer Intern</h3>
             <p>May 2023 - Aug 2023 (4 months)</p>
-            <p>Leveraged expertise in Python, using Visual Studio Code, to collaborate effectively within a cross-functional team, driving scripted solutions with a focus on a test-driven development approach to assure optimal code quality...</p>
+            <p>Leveraged expertise in Python, using Visual Studio Code, to collaborate effectively within a cross-functional team, driving scripted solutions with a focus on a test-driven development approach to assure optimal code quality. Managed version control meticulously through GitHub and contributed actively in a DevOps environment, gaining practical experience with Docker for containerizing applications, promoting enhanced deployment, and scalability...</p>
             
             <h3>CMO FUNDING | Marketing Manager</h3>
             <p>Jun 2022 - Aug 2022 (3 months)</p>
             <p>Assisted with addressing the organization’s information technology needs, focusing on creating and maintaining the company website, ensuring it met organizational and user needs...</p>
-            
-            <h3>Castle Group | Intern</h3>
-            <p>Jun 2021 - Aug 2021 (3 months)</p>
-            <p>Processed ownership information into accounting software, assigned fees into new residents' accounts...</p>
-            
-            <h3>Coconut Creek Automall | File Manager</h3>
-            <p>Jun 2020 - Aug 2020 (3 months)</p>
-            <p>Organized the back-office paperwork, purged old information from previous customer files, demonstrated ability to work under little to no supervision...</p>
-            
-            <h3>Broward Health | Front Desk Attendant</h3>
-            <p>Dec 2019 - Mar 2020 (4 months)</p>
-            <p>Offered customer service support to patients and visitors, delivered flowers and gifts for patients, answered phone calls...</p>
-            
-            <h3>HCA Florida Westside Hospital | Volunteer</h3>
-            <p>Jun 2018 - Sep 2018 (4 months)</p>
-            <p>Offered customer service to patients and visitors. Checked in visitors and patients, unloaded boxes, and dedicated time in OR unit...</p>
+
+            <!-- Additional Experience Details... -->
         </section>
 
         <!-- Education Section -->
@@ -160,6 +173,15 @@
             </ul>
         </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="tab-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Roblox Adventure Game Development:</strong> Architected and deployed complex adventure games on Roblox using Lua in Roblox Studio, integrating advanced algorithms for dynamic quests, multi-level challenges, in-game monetization, player animations, and GUIs.</li>
+                <!-- Add more projects as needed -->
+            </ul>
+        </section>
+
         <!-- Certifications Section -->
         <section id="certifications" class="tab-content">
             <h2>Certifications</h2>
@@ -175,8 +197,8 @@
     </div>
 
     <script>
-        // Default to show the Experience tab content on page load
-        document.getElementById("experience").style.display = "block";
+        // Default to show the About Me tab content on page load
+        document.getElementById("about").style.display = "block";
     </script>
 
 </body>
