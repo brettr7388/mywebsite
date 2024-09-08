@@ -31,7 +31,29 @@
         header p {
             margin: 5px 0;
         }
-        section {
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0077cc;
+            margin-top: 20px;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #005fa3;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
             background-color: #fff;
             margin: 20px 0;
             padding: 20px;
@@ -49,6 +71,16 @@
             margin: 5px 0;
         }
     </style>
+    <script>
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+        }
+    </script>
 </head>
 <body>
 
@@ -59,10 +91,18 @@
         <p><a href="https://www.linkedin.com/in/brett-rosenberg7388" style="color: #fff; text-decoration: none;">LinkedIn Profile</a></p>
     </header>
 
+    <!-- Navigation Tabs -->
+    <nav>
+        <a href="javascript:void(0)" onclick="openTab('education')">Education</a>
+        <a href="javascript:void(0)" onclick="openTab('experience')">Experience</a>
+        <a href="javascript:void(0)" onclick="openTab('involvement')">Campus Involvement</a>
+        <a href="javascript:void(0)" onclick="openTab('skills')">Skills</a>
+    </nav>
+
     <!-- Main Content Section -->
     <div class="container">
-        <!-- Education Section -->
-        <section>
+        <!-- Education Tab Content -->
+        <section id="education" class="tab-content active">
             <h2>Education</h2>
             <p><strong>University of Central Florida</strong> - Bachelor of Science in Computer Science</p>
             <p>Expected Graduation: May 2026 | GPA: 3.8, Dean’s List</p>
@@ -72,8 +112,8 @@
             </ul>
         </section>
 
-        <!-- Relevant Experience Section -->
-        <section>
+        <!-- Experience Tab Content -->
+        <section id="experience" class="tab-content">
             <h2>Relevant Experience</h2>
             <h3>Roblox Games | Designer/Scripter</h3>
             <p>December 2022 – Present</p>
@@ -92,8 +132,8 @@
             </ul>
         </section>
 
-        <!-- Campus Involvement Section -->
-        <section>
+        <!-- Campus Involvement Tab Content -->
+        <section id="involvement" class="tab-content">
             <h2>Campus Involvement</h2>
             <h3>UCF Research | Undergraduate CS Department Researcher</h3>
             <p>May 2024 – Present</p>
@@ -115,8 +155,8 @@
             </ul>
         </section>
 
-        <!-- Skills Section -->
-        <section>
+        <!-- Skills Tab Content -->
+        <section id="skills" class="tab-content">
             <h2>Skills</h2>
             <ul>
                 <li><strong>Programming Languages:</strong> Python, C, Lua, Java</li>
