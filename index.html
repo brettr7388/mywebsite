@@ -107,8 +107,10 @@
             const details = element.nextElementSibling;
             if (details.style.display === "none" || details.style.display === "") {
                 details.style.display = "block";
+                element.innerHTML = element.innerHTML.replace("+", "-"); // Change to "-" when expanded
             } else {
                 details.style.display = "none";
+                element.innerHTML = element.innerHTML.replace("-", "+"); // Change to "+" when collapsed
             }
         }
 
@@ -213,7 +215,7 @@
             <h2>Relevant Experience</h2>
 
             <div class="experience-item">
-                <h3 onclick="toggleExperience(this)">PEDIATRIX | Intern</h3>
+                <h3 onclick="toggleExperience(this)">+ PEDIATRIX | Intern</h3>
                 <div class="experience-details">
                     <p>May 2023 – August 2023</p>
                     <ul>
@@ -226,7 +228,7 @@
             </div>
 
             <div class="experience-item">
-                <h3 onclick="toggleExperience(this)">Roblox Games | Designer/Scripter</h3>
+                <h3 onclick="toggleExperience(this)">+ Roblox Games | Designer/Scripter</h3>
                 <div class="experience-details">
                     <p>December 2022 – Present</p>
                     <ul>
@@ -238,7 +240,7 @@
             </div>
 
             <div class="experience-item">
-                <h3 onclick="toggleExperience(this)">Marketing Manager</h3>
+                <h3 onclick="toggleExperience(this)">+ Marketing Manager</h3>
                 <div class="experience-details">
                     <p>CMO FUNDING · Part-time | Jun 2022 - Aug 2022 · 3 mos | CORAL SPRINGS · On-site</p>
                     <ul>
@@ -250,7 +252,7 @@
             </div>
 
             <div class="experience-item">
-                <h3 onclick="toggleExperience(this)">Intern</h3>
+                <h3 onclick="toggleExperience(this)">+ Intern</h3>
                 <div class="experience-details">
                     <p>Castle Group · Full-time | Jun 2021 - Aug 2021 · 3 mos | Florida, United States · On-site</p>
                     <ul>
@@ -261,7 +263,7 @@
             </div>
 
             <div class="experience-item">
-                <h3 onclick="toggleExperience(this)">File Manager</h3>
+                <h3 onclick="toggleExperience(this)">+ File Manager</h3>
                 <div class="experience-details">
                     <p>Coconut Creek Automall · Full-time | Jun 2020 - Aug 2020 · 3 mos | Florida, United States · On-site</p>
                     <ul>
@@ -272,7 +274,7 @@
             </div>
 
             <div class="experience-item">
-                <h3 onclick="toggleExperience(this)">Front Desk Attendant</h3>
+                <h3 onclick="toggleExperience(this)">+ Front Desk Attendant</h3>
                 <div class="experience-details">
                     <p>Broward Health · Part-time | Dec 2019 - Mar 2020 · 4 mos | Coral Springs, Florida, United States · On-site</p>
                     <ul>
@@ -283,7 +285,7 @@
             </div>
 
             <div class="experience-item">
-                <h3 onclick="toggleExperience(this)">Volunteer</h3>
+                <h3 onclick="toggleExperience(this)">+ Volunteer</h3>
                 <div class="experience-details">
                     <p>HCA Florida Westside Hospital · Part-time | Jun 2018 - Sep 2018 · 4 mos | Plantation, Florida, United States · On-site</p>
                     <ul>
