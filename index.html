@@ -77,6 +77,12 @@
         .experience-details {
             display: none; /* Hide experience details for accordion */
         }
+        .about-image {
+            width: 150px; 
+            margin-right: 20px; 
+            float: left; 
+            border-radius: 8px;
+        }
     </style>
     <script>
         // Smooth Scrolling for Navigation
@@ -146,6 +152,8 @@
 
     <!-- Navigation Tabs -->
     <nav>
+        <a href="#about" onclick="openTab('about')">About Me</a>
+        <a href="#career-objective" onclick="openTab('career-objective')">Career Objective</a>
         <a href="#education" onclick="openTab('education')">Education</a>
         <a href="#experience" onclick="openTab('experience')">Experience</a>
         <a href="#involvement" onclick="openTab('involvement')">Campus Involvement</a>
@@ -154,8 +162,26 @@
 
     <!-- Main Content Section -->
     <div class="container">
+
+        <!-- About Me Tab Content -->
+        <section id="about" class="tab-content active">
+            <h2>About Me</h2>
+            <img src="Brett.pdf" alt="Brett Rosenberg" class="about-image">
+            <p>Hello! I'm Brett Rosenberg, a passionate Computer Science major at the University of Central Florida, currently in my third year. I am deeply interested in software development, machine learning, and game design. Since beginning my journey at UCF in 2022, I've been fortunate to have enriching experiences that have shaped both my academic and professional trajectory. My favorite class so far has been Computer Science 1, where I had the privilege of learning from Professor Arup Guha, whose guidance was instrumental in helping me prepare for my foundation exam. This course built upon my initial exposure to C Programming and ignited my passion for coding.</p>
+            <p>Beyond academics, I'm actively involved in various campus organizations like HACK@UCF, the Tennis Club, and the EXCEL and COMPASS programs. I also contribute as a mentor in the EXCEL program, helping undecided freshmen explore STEM majors, and as a Teaching Assistant for the Concepts in Computer Science course, where I assist over 700 students in mastering Python and foundational computer science concepts.</p>
+            <p>Professionally, I have experience working with Roblox Studio to create engaging adventure games, where I employ Lua scripting to build complex gameplay mechanics and optimize user engagement, reaching over 185,000 unique visitors. During my internship at Pediatrix, I collaborated on cross-functional teams to apply Test-Driven Development (TDD) practices in Python, handle data management with SQL and Linux scripts, and containerize applications using Docker in a DevOps environment.</p>
+            <p>Currently, I am involved in research with the UCF CS Department, focusing on designing and implementing machine learning models that leverage large datasets to drive insights and support healthcare decision-making. My goal is to continue combining my love for coding, machine learning, and game design to develop innovative solutions that have a meaningful impact.</p>
+            <p>When I’m not coding or mentoring, you can find me cheering for my favorite NBA team, hanging out with friends, or spending time with my cat. I firmly believe that the key to thriving in college is to stay curious, ask questions, and, most importantly, avoid the dining hall food!</p>
+        </section>
+
+        <!-- Career Objective Tab Content -->
+        <section id="career-objective" class="tab-content">
+            <h2>Career Objective</h2>
+            <p>As a dedicated and ambitious Computer Science student at the University of Central Florida, I am driven by a strong passion for artificial intelligence, software engineering, and the innovative potential they hold. My career objective is to leverage my skills in programming, machine learning, and software development to build intelligent, scalable, and impactful solutions. With hands-on experience in creating machine learning models, developing dynamic software applications, and designing interactive games, I am eager to contribute to cutting-edge projects that push the boundaries of technology. I am particularly interested in roles that allow me to collaborate with forward-thinking teams to solve complex problems, innovate in AI and software engineering, and continuously learn and grow as a technologist. I aim to apply my analytical skills, technical expertise, and creativity to contribute to advancements in AI-driven applications and transformative software solutions that enhance user experiences and drive meaningful outcomes.</p>
+        </section>
+
         <!-- Education Tab Content -->
-        <section id="education" class="tab-content active">
+        <section id="education" class="tab-content">
             <h2>Education</h2>
             <!-- UCF Education Section -->
             <img src="knight.jpeg" alt="University of Central Florida Knight" style="width: 150px; margin-right: 20px; float: left; border-radius: 8px;">
@@ -172,7 +198,7 @@
             <p>Aug 2018 - Jun 2022</p>
             <ul>
                 <li>Activities and societies: Varsity tennis for three years, National Honor Society, DECA</li>
-                <li>Skills: Computer Literacy, QuickBooks, and Microsoft Office</li>
+                <li>Skills: Computer Literacy, QuickBooks, and +1 skill</li>
             </ul>
         </section>
 
