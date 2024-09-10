@@ -36,6 +36,7 @@
             background-color: #000; /* Changed to black */
             margin-top: 20px;
             padding: 10px 0;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
         }
         nav a {
             color: #FFD700; /* Changed to gold */
@@ -81,6 +82,59 @@
         }
         .clear {
             clear: both; /* Clear floats */
+        }
+
+        /* Mobile Styles */
+        @media only screen and (max-width: 768px) {
+            body {
+                font-size: 14px; /* Reduce base font size */
+                padding: 0 10px; /* Add some padding to avoid content touching screen edges */
+            }
+
+            header h1 {
+                font-size: 1.8em; /* Smaller font size for header */
+            }
+
+            header p {
+                font-size: 0.9em; /* Smaller font size for sub-header */
+                margin: 8px 0; /* Reduce margin */
+            }
+
+            nav {
+                flex-wrap: wrap; /* Allow navigation items to wrap */
+                padding: 5px 0; /* Reduce padding */
+            }
+
+            nav a {
+                margin: 5px 0; /* Reduce margins for better fit */
+                padding: 5px 10px; /* Adjust padding */
+                font-size: 0.9em; /* Smaller font size */
+            }
+
+            .container {
+                width: 95%; /* Full width with padding */
+                padding: 10px; /* Less padding */
+            }
+
+            .about-image {
+                width: 100%; /* Full width for images */
+                margin: 0 auto 15px auto; /* Center and add bottom margin */
+                float: none; /* No floating */
+                display: block; /* Display images as block */
+            }
+
+            h2, h3 {
+                font-size: 1.4em; /* Smaller font size for headings */
+                margin-top: 20px; /* Add spacing to separate sections */
+            }
+
+            ul {
+                padding-left: 20px; /* Indent lists */
+            }
+
+            .tab-content {
+                padding: 10px; /* Add padding inside tabs */
+            }
         }
     </style>
     <script>
