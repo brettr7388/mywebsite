@@ -311,15 +311,19 @@
             </ul>
         </section>
 
-        <!-- New Disney Park Reservation System Tab -->
-        <section id="disney-park" class="tab-content">
+        <!-- Disney Park Reservation System Tab Content -->
+        <section id="disney-project" class="tab-content">
             <h2>Disney Park Reservation System</h2>
-            <p>This is a Disney Park Reservation System that allows users to make and manage event reservations. It includes a Node.js backend with Express and MongoDB for data persistence and a React.js frontend for the user interface.</p>
+            <p>This project is a Disney Park Reservation System that allows users to make and manage event reservations. It includes a Node.js backend with Express and MongoDB for data persistence, and a React.js frontend for the user interface.</p>
+
             <h3>Features:</h3>
             <ul>
-                <li>Create Reservations: Users can create reservations for specific events.</li>
-                <li>View Reservations: List and view all the reservations in the system.</li>
+                <li><strong>Create Reservations:</strong> Users can create reservations for specific events.</li>
+                <li><strong>View Reservations:</strong> List and view all the reservations in the system.</li>
+                <li><strong>Responsive Frontend:</strong> Built with React.js to offer a dynamic user experience.</li>
+                <li><strong>Data Persistence:</strong> MongoDB is used for database management.</li>
             </ul>
+
             <h3>Technologies Used:</h3>
             <ul>
                 <li>Node.js</li>
@@ -328,13 +332,43 @@
                 <li>React.js</li>
                 <li>Mongoose</li>
             </ul>
+
             <h3>How to Run Locally:</h3>
             <ol>
-                <li>Clone the repository: <code>git clone https://github.com/brettr7388/disney-park-reservation.git</code></li>
-                <li>Install dependencies and run the app locally following the instructions in the README file.</li>
+                <li>Clone the repository:
+                    <pre><code>git clone https://github.com/brettr7388/disney-park-reservation.git</code></pre>
+                </li>
+                <li>Install dependencies for both the backend and frontend:
+                    <pre><code>cd backend && npm install</code></pre>
+                    <pre><code>cd frontend && npm install</code></pre>
+                </li>
+                <li>Ensure MongoDB is running locally or connect to a cloud instance, and update the connection string in the `.env` file.</li>
+                <li>Start the backend and frontend servers:
+                    <pre><code>cd backend && npm start</code></pre>
+                    <pre><code>cd frontend && npm start</code></pre>
+                </li>
             </ol>
-        </section>
 
+            <h3>Key Accomplishments:</h3>
+            <ul>
+                <li>Implemented asynchronous data handling in the frontend for efficient user interaction.</li>
+                <li>Designed scalable architecture to allow future expansion such as user authentication and event filtering.</li>
+                <li>Handled cross-origin requests (CORS) efficiently to ensure smooth frontend-backend communication.</li>
+            </ul>
+
+            <h3>Challenges Faced:</h3>
+            <ul>
+                <li>Optimizing concurrent requests handling in MongoDB to avoid race conditions in reservation creation.</li>
+                <li>Setting up cross-origin resource sharing (CORS) correctly between the frontend and backend servers.</li>
+            </ul>
+
+            <h3>Future Enhancements:</h3>
+            <ul>
+                <li>Adding user authentication and authorization for personalized reservations.</li>
+                <li>Event search and filtering capabilities to improve the user experience.</li>
+                <li>Integration with third-party APIs for real-time event management and availability.</li>
+            </ul>
+        </section>
         <!-- Campus Involvement Tab Content -->
         <section id="involvement" class="tab-content">
             <h2>Campus Involvement</h2>
