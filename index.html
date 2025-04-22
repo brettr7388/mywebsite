@@ -7,7 +7,10 @@
 
   <!-- Google Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -23,11 +26,11 @@
 </head>
 <body>
 
-  <!-- STICKY NAV -->
-<nav id="nav">
+  <!-- STICKY PILL‑NAV -->
+  <nav id="nav">
     <div class="container nav-container pill-nav">
       <ul class="nav-links">
-        <li><a href="#header"     class="link">Home</a></li>
+        <li><a href="#header"     class="link active">Home</a></li>
         <li><a href="#projects"   class="link">My Projects</a></li>
         <li><a href="#experience" class="link">Experience</a></li>
         <li><a href="#skills"     class="link">Skills</a></li>
@@ -37,37 +40,52 @@
     </div>
   </nav>
   
-  <!-- HERO + PARTICLES -->
+  <!-- HERO (in a dark‑blue box) -->
   <header id="header">
     <div id="particles-js"></div>
-  
+
     <div class="hero-content" data-aos="fade-up">
-      <!-- AVATAR -->
+      <!-- AVATAR (PDF embed) -->
       <div class="avatar">
-        <img src="images/Brett.pdf" alt="Brett Rosenberg">
+        <object
+          data="images/Brett.pdf"
+          type="application/pdf"
+          class="avatar-pdf"
+        >
+          <!-- fallback if PDF fails -->
+          <img src="images/Brett.png" alt="Brett Rosenberg">
+        </object>
+        <span class="emoji">👋</span>
       </div>
-  
+
       <!-- GREETING -->
       <h1>Hi, I’m <span class="text-blue">Brett</span></h1>
-  
+
       <!-- SUBTITLE -->
       <p class="subtitle">
         A Computer Science student at UCF exploring software development,<br/>
         machine learning, and game design.
       </p>
-  
+
       <!-- SOCIAL BUTTONS -->
       <div class="hero-socials">
-        <a href="https://github.com/brettr7388"   target="_blank" class="social-btn">
+        <a
+          href="https://github.com/brettr7388"
+          target="_blank"
+          class="social-btn"
+        >
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://linkedin.com/in/brett-rosenberg7388" target="_blank" class="social-btn">
+        <a
+          href="https://linkedin.com/in/brett-rosenberg7388"
+          target="_blank"
+          class="social-btn"
+        >
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
     </div>
   </header>
-  
 
   <!-- ABOUT ME -->
   <section id="about">
