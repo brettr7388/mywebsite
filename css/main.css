@@ -3,10 +3,10 @@
 html { scroll-behavior: smooth; }
 body { background:#181a1b; color:#eee; }
 
-/* STICKY NAV */
+/* PILL‑NAV */
 #nav {
-  position: fixed;    /* fixed so it stays ½" down */
-  top: 0.5in;         
+  position: fixed;
+  top: 0.5in;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -18,7 +18,6 @@ body { background:#181a1b; color:#eee; }
   backdrop-filter: blur(8px);
   border-radius: 50px;
   padding: 0.5rem 1rem;
-  margin: 0 auto;
 }
 .nav-links {
   list-style: none;
@@ -52,15 +51,13 @@ header#header {
 
 /* HERO CONTENT */
 .hero-content {
-  /* absolute positioning overwritten by JS */
-  position: absolute;
-  top: auto;
-  left: auto;
-  transform: none;
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  margin: 2rem auto 0 auto;  /* sits a bit below the pill‑nav */
   text-align: center;
   color: #fff;
   z-index: 2;
-  max-width: 90%;
 }
 
 /* AVATAR */
@@ -68,7 +65,7 @@ header#header {
   position: relative;
   width: 140px;
   height: 140px;
-  margin: 0 auto 0.5rem;
+  margin: 0 auto 1rem;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid rgba(255,255,255,0.6);
@@ -97,13 +94,13 @@ header#header {
 .subtitle {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   color: #dddddd;
-  margin-top: 0.5in;  /* ½" below the greeting */
+  margin-top: 0.5in;  /* roughly ½" below the greeting */
   line-height: 1.4;
 }
 
 /* SOCIAL BUTTONS */
 .hero-socials {
-  margin-top: 1in;    /* 1" below subtitle */
+  margin-top: 1in;  /* roughly 1" below subtitle */
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -126,9 +123,10 @@ header#header {
   color: #fff;
 }
 
-/* OTHER SECTIONS (unchanged) */
+/* ABOUT ME (unchanged) */
 section { padding:4rem 0; }
 section h2 { text-align:center; font-size:2rem; margin-bottom:2rem; color:#fff; }
 .about-image { width:150px; margin-right:20px; float:left; border-radius:8px; }
 .clear { clear:both; }
-/* … and the rest of your existing CSS … */
+
+/* … your other styles remain untouched … */
