@@ -1,4 +1,4 @@
-// Sticky‑back‑to‑top
+// Back to top
 const backBtn = document.getElementById('backToTopBtn');
 window.addEventListener('scroll',()=>{
   if(window.scrollY>300) backBtn.classList.add('show');
@@ -9,14 +9,13 @@ backBtn.addEventListener('click',e=>{
   window.scrollTo({top:0,behavior:'smooth'});
 });
 
-// Scroll‑spy active link
-const sections = document.querySelectorAll('section, header');
+// Scroll‑spy
 const navLinks = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll',()=>{
-  let fromTop = window.scrollY + 80;
+  const fromTop = window.scrollY + 100;
   navLinks.forEach(link=>{
-    let section = document.querySelector(link.hash);
-    if(section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop){
+    const sec = document.querySelector(link.hash);
+    if(sec.offsetTop <= fromTop && sec.offsetTop + sec.offsetHeight > fromTop){
       link.classList.add('active');
     } else link.classList.remove('active');
   });

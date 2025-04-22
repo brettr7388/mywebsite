@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Brett Rosenberg | Portfolio</title>
+  <title>Brett Rosenberg – Portfolio</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    integrity="sha512‑iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous"
   />
 
@@ -26,68 +24,195 @@
 <body>
 
   <!-- STICKY NAV -->
-  <nav id="nav">
-    <div class="container nav-container">
-      <a href="#header" class="logo">
-        <!-- embedding your PDF as profile image; browsers will show first page -->
-        <img src="images/Brett.pdf" alt="Brett Rosenberg" class="profile-pic">
-      </a>
+<nav id="nav">
+    <div class="container nav-container pill-nav">
       <ul class="nav-links">
-        <li><a href="#about" class="link">About</a></li>
-        <li><a href="#projects" class="link">Projects</a></li>
-        <li><a href="#skills" class="link">Skills</a></li>
+        <li><a href="#header"     class="link">Home</a></li>
+        <li><a href="#projects"   class="link">My Projects</a></li>
         <li><a href="#experience" class="link">Experience</a></li>
-        <li><a href="#education" class="link">Education</a></li>
-        <li><a href="#contact" class="link">Contact</a></li>
+        <li><a href="#skills"     class="link">Skills</a></li>
+        <li><a href="#education"  class="link">Education</a></li>
+        <li><a href="#contact"    class="link">Contact</a></li>
       </ul>
     </div>
   </nav>
-
+  
   <!-- HERO + PARTICLES -->
   <header id="header">
     <div id="particles-js"></div>
-    <div class="hero" data-aos="fade-up">
+  
+    <div class="hero-content" data-aos="fade-up">
+      <!-- AVATAR -->
+      <div class="avatar">
+        <img src="images/Brett.pdf" alt="Brett Rosenberg">
+      </div>
+  
+      <!-- GREETING -->
       <h1>Hi, I’m <span class="text-blue">Brett</span></h1>
+  
+      <!-- SUBTITLE -->
       <p class="subtitle">
-        A Computer Science student at UCF exploring software development, machine learning, and game design.
+        A Computer Science student at UCF exploring software development,<br/>
+        machine learning, and game design.
       </p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn-blue"><i class="fas fa-code"></i> Projects</a>
-        <a href="https://github.com/brettr7388" target="_blank" class="btn-blue-outline"><i class="fab fa-github"></i> GitHub</a>
+  
+      <!-- SOCIAL BUTTONS -->
+      <div class="hero-socials">
+        <a href="https://github.com/brettr7388"   target="_blank" class="social-btn">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/brett-rosenberg7388" target="_blank" class="social-btn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
       </div>
     </div>
   </header>
+  
 
-  <!-- PROJECTS -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="main-font" data-aos="fade-in">My <span class="text-blue">Projects</span></h2>
+  <!-- ABOUT ME -->
+  <section id="about">
+    <div class="container" data-aos="fade-in">
+      <h2>About Me</h2>
+      <img src="images/cs.jpeg" alt="Computer Science" class="about-image">
+      <p>Hello! I'm Brett Rosenberg, a passionate Computer Science major at UCF in my third year. I love software development, machine learning, and game design. My favorite class so far has been CS 1 with Prof. Arup Guha, which built on my C programming background and ignited my coding passion.</p>
+      <p>On campus I'm active with HACK@UCF, Tennis Club, EXCEL & COMPASS. I mentor freshmen in EXCEL and TA the Concepts in CS course for 700+ students.</p>
+      <p>Professionally, I’ve built adventure games in Roblox Studio (Lua scripting) with 340k+ visitors. At Pediatrix I applied TDD in Python, managed SQL/Linux scripts on 10k+ records, and Dockerized services in DevOps.</p>
+      <img src="images/RobloxStudio.jpeg" alt="Roblox Studio" class="about-image">
+      <p>Currently I'm researching ML models in Python to inform healthcare decisions at UCF’s CS department. Outside code, I’m cheering on the NBA, hanging with friends, or spoiling my cat.</p>
+      <div class="clear"></div>
+    </div>
+  </section>
 
-      <!-- Roblox Games -->
-      <div class="project-row" data-aos="fade-up">
-        <div class="project-left">
-          <img src="images/RobloxStudio.jpeg" alt="Roblox Games">
+  <!-- CAREER OBJECTIVE -->
+  <section id="career-objective" class="projects">
+    <div class="container" data-aos="fade-in">
+      <h2>Career Objective</h2>
+      <p>As an ambitious CS student, my goal is to leverage programming, ML, and software engineering skills to build intelligent, scalable solutions. I seek roles pushing tech boundaries—AI, full‑stack, and data‑driven projects—while collaborating with forward‑thinking teams.</p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="education">
+    <div class="container" data-aos="zoom-in">
+      <h2>Education</h2>
+      <div class="education-card">
+        <div class="card-column-image">
+          <img src="images/knight.jpeg" alt="UCF Logo">
         </div>
-        <div class="project-right">
-          <h3>Roblox Adventure Games</h3>
-          <p>Architected & scripted immersive Roblox experiences in Lua with 340,000+ players.</p>
-          <div class="project-links">
-            <a href="#roblox-games" class="btn-blue"><i class="fas fa-external-link-alt"></i> View Details</a>
-          </div>
+        <div class="card-column-large">
+          <h4>University of Central Florida</h4>
+          <p>BSc Computer Science, Expected May 2026 | GPA: 3.8 (Dean’s List)</p>
+          <ul>
+            <li>HACK@UCF, Tennis Club, EXCEL & COMPASS, Internship panel speaker</li>
+            <li>Courses: Systems Software, OOP, CS 2, Calculus 2, Physics, Discrete Math</li>
+          </ul>
         </div>
       </div>
-
-      <!-- Disney Park Reservation -->
-      <div class="project-row" data-aos="fade-up" data-aos-delay="100">
-        <div class="project-left">
-          <img src="images/cs.jpeg" alt="Disney Park Reservation">
+      <div class="education-card" style="margin-top:2rem;">
+        <div class="card-column-image">
+          <img src="images/eagle.jpeg" alt="MSD Eagle">
         </div>
+        <div class="card-column-large">
+          <h4>Marjory Stoneman Douglas High School</h4>
+          <p>Aug 2018 – Jun 2022 | Varsity Tennis (3 yrs), NHS, DECA</p>
+          <ul>
+            <li>Skills: QuickBooks, MS Office, Computer Literacy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="projects">
+    <div class="container" data-aos="fade-in">
+      <h2>Relevant Experience</h2>
+      <div class="project-row" data-aos="fade-up">
+        <div class="project-left"><img src="images/knight.jpeg" alt="Pediatrix"></div>
         <div class="project-right">
-          <h3>Disney Park Reservation System</h3>
-          <p>Full‑stack Node.js/Express + React + MongoDB app for managing event bookings.</p>
-          <div class="project-links">
-            <a href="#disney-park" class="btn-blue"><i class="fas fa-external-link-alt"></i> View Details</a>
-          </div>
+          <h3>PEDIATRIX | Intern</h3>
+          <ul>
+            <li>TDD in Python → 50% fewer post‑deploy bugs</li>
+            <li>Cleaned 10k+ emails via SQL & Linux scripts</li>
+            <li>Dockerized apps in DevOps pipelines</li>
+            <li>Resolved 50+ tickets on ServiceNow</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-row" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-left"><img src="images/cs.jpeg" alt="Marketing Manager"></div>
+        <div class="project-right">
+          <h3>Marketing Manager | CMO FUNDING</h3>
+          <ul>
+            <li>Built & maintained company website</li>
+            <li>Improved client scheduling & inquiries</li>
+            <li>Skills: Digital B2B Marketing, Website Design</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-row" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-left"><img src="images/cs.jpeg" alt="Castle Group"></div>
+        <div class="project-right">
+          <h3>Intern | Castle Group</h3>
+          <ul><li>Processed resident account data in accounting software</li></ul>
+        </div>
+      </div>
+      <div class="project-row" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-left"><img src="images/cs.jpeg" alt="Coconut Creek Automall"></div>
+        <div class="project-right">
+          <h3>File Manager | Coconut Creek Automall</h3>
+          <ul><li>Organized & purged back‑office customer files</li></ul>
+        </div>
+      </div>
+      <div class="project-row" data-aos="fade-up" data-aos-delay="400">
+        <div class="project-left"><img src="images/cs.jpeg" alt="Broward Health"></div>
+        <div class="project-right">
+          <h3>Front Desk Attendant | Broward Health</h3>
+          <ul><li>Customer support, deliveries & phone etiquette</li></ul>
+        </div>
+      </div>
+      <div class="project-row" data-aos="fade-up" data-aos-delay="500">
+        <div class="project-left"><img src="images/cs.jpeg" alt="HCA Volunteering"></div>
+        <div class="project-right">
+          <h3>Volunteer | HCA Florida Westside Hospital</h3>
+          <ul><li>Visitor check‑in, OR unit support, logistics</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAMPUS INVOLVEMENT -->
+  <section id="involvement" class="projects">
+    <div class="container" data-aos="fade-in">
+      <h2>Campus Involvement</h2>
+      <div class="project-row" data-aos="fade-up">
+        <div class="project-left"><img src="images/cs.jpeg" alt="UCF Research"></div>
+        <div class="project-right">
+          <h3>UCF Research | Undergrad CS Researcher</h3>
+          <ul>
+            <li>Built regression, tree & XGBoost models on 10k+ records</li>
+            <li>Presented findings to AdventHealth execs</li>
+            <li><a href="https://www.cs.ucf.edu/~ecl/papers/2405.flairs.wu.pdf" target="_blank">Research Paper</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-row" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-left"><img src="images/cs.jpeg" alt="EXCEL Mentor"></div>
+        <div class="project-right">
+          <h3>EXCEL Program Mentor</h3>
+          <ul>
+            <li>Mentored 40+ undecided freshmen</li>
+            <li>Organized 3+ networking events for 100+ students</li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-row" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-left"><img src="images/cs.jpeg" alt="CS TA"></div>
+        <div class="project-right">
+          <h3>Teaching Assistant | Concepts in CS</h3>
+          <ul>
+            <li>Graded & guided 700+ students on Python & algorithms</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -97,68 +222,50 @@
   <section id="skills" class="skills">
     <div class="seperator-skew-top"><svg viewBox="0 0 2560 100" preserveAspectRatio="none"><polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon></svg></div>
     <div class="container" data-aos="fade-in">
-      <h2 class="main-font text-white">Technical <span class="text-blue">Skills</span></h2>
+      <h2 class="text-white">Skills & Technologies</h2>
       <ul class="skills-icons">
         <li><i class="devicon-python-plain colored"></i><span>Python</span></li>
+        <li><i class="devicon-c-plain colored"></i><span>C</span></li>
+        <li><i class="devicon-lua-plain colored"></i><span>Lua</span></li>
+        <li><i class="devicon-java-plain colored"></i><span>Java</span></li>
+        <li><i class="devicon-html5-plain colored"></i><span>HTML</span></li>
+        <li><i class="devicon-css3-plain colored"></i><span>CSS</span></li>
         <li><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></li>
-        <li><i class="devicon-react-original colored"></i><span>React</span></li>
+        <li><i class="devicon-react-original colored"></i><span>React.js</span></li>
         <li><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></li>
         <li><i class="devicon-docker-plain colored"></i><span>Docker</span></li>
-        <li><i class="devicon-git-plain colored"></i><span>Git</span></li>
-        <!-- etc… -->
+        <li><i class="devicon-github-plain colored"></i><span>GitHub</span></li>
+        <li><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></li>
       </ul>
     </div>
     <div class="seperator-skew-bottom"><svg viewBox="0 0 2560 100" preserveAspectRatio="none"><polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon></svg></div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="projects">
-    <div class="container">
-      <h2 class="main-font" data-aos="fade-in">Relevant <span class="text-blue">Experience</span></h2>
-
-      <div class="project-row" data-aos="fade-up">
-        <div class="project-left">
-          <img src="images/knight.jpeg" alt="UCF Internship">
-        </div>
-        <div class="project-right">
-          <h3>PEDIATRIX Intern</h3>
-          <ul>
-            <li>Test‑Driven Development in Python → 50% fewer bugs.</li>
-            <li>SQL & Linux scripts cleaned 10,000+ records.</li>
-            <li>Dockerized services & supported 50+ tickets in ServiceNow.</li>
-          </ul>
-        </div>
-      </div>
+  <!-- ROBLOX GAMES -->
+  <section id="roblox-games" class="projects">
+    <div class="container" data-aos="fade-in">
+      <h2>Blastin’ Off Games</h2>
+      <p>My Roblox group creating adventure and parkour games with Lua scripting, GUIs, and monetization.</p>
+      <!-- list games as in OG… -->
     </div>
   </section>
 
-  <!-- EDUCATION -->
-  <section id="education" class="education">
-    <div class="container" data-aos="zoom-in">
-      <h2 class="main-font">My <span class="text-blue">Education</span></h2>
-      <div class="education-card">
-        <div class="card-column-image">
-          <img src="images/knight.jpeg" alt="UCF Logo">
-        </div>
-        <div class="card-column-large">
-          <h4>University of Central Florida</h4>
-          <p>BSc Computer Science, Expected May 2026 | GPA: 3.8 (Dean’s List)</p>
-          <ul>
-            <li>EXCEL Mentor & CS TA → 700+ students</li>
-            <li>Research: XGBoost models for diabetes care</li>
-          </ul>
-        </div>
-      </div>
+  <!-- DISNEY PARK RESERVATION -->
+  <section id="disney-park" class="projects">
+    <div class="container" data-aos="fade-in">
+      <h2>Disney Park Reservation System</h2>
+      <p>Node.js/Express + React + MongoDB full‑stack app for event reservations.</p>
+      <!-- OG details… -->
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
     <div class="container" data-aos="fade-in">
-      <h2 class="section-title main-font">Contact <span class="text-blue">Me</span></h2>
+      <h2>Contact Me</h2>
       <div class="card-container">
         <div class="card"><i class="fas fa-envelope"></i><h3>Email</h3><p>brettr7388@gmail.com</p></div>
-        <div class="card"><i class="fab fa-github"></i><h3>GitHub</h3><a href="https://github.com/brettr7388" class="text-blue" target="_blank">brettr7388</a></div>
+        <div class="card"><i class="fas fa-phone"></i><h3>Phone</h3><p>954‑249‑3388</p></div>
         <div class="card"><i class="fab fa-linkedin"></i><h3>LinkedIn</h3><a href="https://linkedin.com/in/brett-rosenberg7388" class="text-blue" target="_blank">/brett-rosenberg7388</a></div>
       </div>
     </div>
