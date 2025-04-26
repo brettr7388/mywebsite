@@ -1017,3 +1017,70 @@ header .seperator-skew svg .fill-white {
     margin: 0 1rem;
   }
 }/*# sourceMappingURL=main.css.map */
+
+
+/* ------------ Experience Section Styles ------------ */
+#experience {
+  background: #fff;
+  color: #333;
+  padding: 3rem 0;
+  position: relative;  /* resets any inherited absolute/overflow */
+  z-index: 1;          /* ensure it sits above any canvas */
+}
+
+#experience h2,
+#experience h3,
+#experience h4 {
+  color: #111;
+}
+
+#experience .experience-item {
+  margin-bottom: 2rem;
+}
+#experience .experience-item ul {
+  list-style: disc inside;
+  margin: 0.5rem 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/* ------------ Skills Section Override ------------ */
+#skills {
+  background: #fff !important;      /* white background */
+  color: #333 !important;           /* dark text */
+  position: relative;               /* establish new stacking context */
+  z-index: 1;                       /* sit above the hidden canvas */
+  overflow: visible;                /* ensure no clipping */
+}
+
+/* Hide the particles canvas inside Skills */
+#skills canvas {
+  display: none !important;
+}
+
+/* If you have any skew separators that are coming in dark, hide them too */
+#skills .seperator-skew-top,
+#skills .seperator-skew-bottom {
+  display: none !important;
+}
+
+
+#skills .skills-icons li {
+  font-size: 2rem;
+  margin: 0.75rem;
+}
+#skills .skills-icons li span {
+  margin-top: 0.25rem;
+}
+
+/* ------------ Skills labels override ------------ */
+#skills .skills-icons,
+#skills .skills-icons li {
+  color: #333 !important;       /* make all icon+text dark */
+}
+
+#skills .skills-icons li span {
+  display: block;               /* label on its own line */
+  margin-top: 0.5rem;           /* a bit of breathing room */
+  font-size: 0.9rem;            /* same or your preferred size */
+  color: #333 !important;       /* ensure it’s visible */
+}

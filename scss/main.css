@@ -1016,4 +1016,22 @@ header .seperator-skew svg .fill-white {
   .footer .footer-flex .footer-icon-links a {
     margin: 0 1rem;
   }
+}
+#experience {
+  background: white;
+  color: #333;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 1;
+}
+#experience h2, #experience h3, #experience h4 {
+  color: #111;
+}
+#experience .experience-item {
+  margin-bottom: 2rem;
+}
+#experience .experience-item ul {
+  list-style: disc inside;
+  margin: 0.5rem 0 1.5rem;
+  padding-left: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

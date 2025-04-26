@@ -4,17 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brett Rosenberg | Software Engineering Portfolio</title>
+    <title>Brett Rosenberg | Computer Science Major</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600;700;800;900&display=swap"
+    />
 
-    <!-- Alfa Slab One font -->
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600;700;800;900&display=swap">
-    
     <!-- Font Awesome icons -->
     <link
       rel="stylesheet"
@@ -22,51 +29,65 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
-    <link rel="icon" href="/img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png" />
 
-    <!-- Animation library styles -->    
+    <!-- AOS animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- Your compiled CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css" />
-
-    <!-- Google Analytics (optional) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBYB5MK388"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-EBYB5MK388');
-    </script>
   </head>
   <body>
-    <!-- HEADER + NAV -->
+    <!-- HEADER -->
     <header id="header">
       <div id="particles-js">
         <nav id="nav" data-aos="fade-in">
           <div class="container nav-container">
-            <a href="#home" id="logo">
-              <!-- replace with your logo if you have one -->
-              <img src="img/logo.png" alt="Brett Rosenberg Logo" />
+            <a href="index.html" id="logo">
+              <img src="img/logo.png" alt="logo" />
             </a>
             <ul class="hide-for-mobile nav-links flex">
-              <li><a href="#home" class="link">Home</a></li>
-              <li><a href="#projects" class="link">My Projects</a></li>
-              <li><a href="#experience" class="link">Experience</a></li>
-              <li><a href="#skills" class="link">Skills</a></li>
-              <li><a href="#education" class="link">Education</a></li>
-              <li><a href="#contact" class="link">Contact</a></li>
+              <li><a href="#header" class="link"><i class="fas fa-home"></i> Home</a></li>
+              <li>
+                <a href="#projects" class="link"><i class="fas fa-code"></i>
+                  Projects</a
+                >
+              </li>
+              <li>
+                <a href="#experience" class="link"
+                  ><i class="fas fa-briefcase"></i> Experience</a
+                >
+              </li>
+              <li>
+                <a href="#skills" class="link"><i class="fas fa-tools"></i>
+                  Skills</a
+                >
+              </li>
+              <li>
+                <a href="#education" class="link"
+                  ><i class="fas fa-user-graduate"></i> Education</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="link"
+                  ><i class="fas fa-envelope"></i> Contact</a
+                >
+              </li>
             </ul>
-          </div>
-          <div class="mobile-menu hide-for-desktop">
-            <div class="container">
-              <div class="mobile-menu-links">
-                <ul class="flex">
-                  <li><a href="#home" class="link blue-hover">Home</a></li>
-                  <li><a href="#projects" class="link blue-hover">My Projects</a></li>
-                  <li><a href="#experience" class="link blue-hover">Experience</a></li>
+            <div class="mobile-menu hide-for-desktop">
+              <div class="container">
+                <ul class="flex mobile-menu-links">
+                  <li><a href="#header" class="link blue-hover">Home</a></li>
+                  <li><a href="#projects" class="link blue-hover">Projects</a></li>
+                  <li>
+                    <a href="#experience" class="link blue-hover"
+                      >Experience</a
+                    >
+                  </li>
                   <li><a href="#skills" class="link blue-hover">Skills</a></li>
-                  <li><a href="#education" class="link blue-hover">Education</a></li>
+                  <li>
+                    <a href="#education" class="link blue-hover">Education</a>
+                  </li>
                   <li><a href="#contact" class="link blue-hover">Contact</a></li>
                 </ul>
               </div>
@@ -78,196 +99,352 @@
         <div class="hero">
           <div data-aos="fade-up">
             <h1 class="h1">
-              Hi, I'm <span class="main-font text-blue">Brett Rosenberg</span>
+              Hi, I’m <span class="main-font text-blue">Brett</span> Rosenberg
             </h1>
             <p class="student" id="student">
-              A third-year Computer Science student at the University of Central Florida.
+              Third-year Computer Science major at the University of Central
+              Florida. Building mobile apps, ML models, and web projects.
             </p>
             <div class="hero-btns">
-              <a href="#projects" class="btn-blue"><i class="fas fa-code"></i> My Projects</a>
-              <a href="https://github.com/brettr7388" class="btn-blue-outline mx-1" id="github-btn" target="_blank">
-                <i class="fab fa-github"></i> GitHub
+              <a href="#projects" class="btn-blue"><i class="fas fa-code"></i>
+                Projects</a
+              >
+              <a
+                href="https://brettr7388.github.io/mywebsite/"
+                class="btn-blue-outline mx-1"
+                target="_blank"
+              >
+                <i class="fab fa-github"></i> Github
               </a>
             </div>
           </div>
         </div>
+
+        <!-- SOCIAL LINKS -->
+        <div class="socials" data-aos="fade-in">
+          <ul>
+            <li class="bg-blue">
+              <a
+                href="https://www.linkedin.com/in/brett-rosenberg7388"
+                target="_blank"
+              >
+                <span class="socials-text">LinkedIn</span
+                ><i class="fab fa-linkedin fa-2x"></i>
+              </a>
+            </li>
+            <li class="bg-dark-grey">
+              <a href="https://github.com/brettr7388" target="_blank">
+                <span class="socials-text">GitHub</span
+                ><i class="fab fa-github fa-2x"></i>
+              </a>
+            </li>
+            <li class="bg-white">
+              <a class="text-dark-grey" href="mailto:brettr7388@gmail.com">
+                <span class="socials-text">Email</span
+                ><i class="fas fa-envelope fa-2x"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="seperator-skew">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+        <svg viewBox="0 0 2560 100" preserveAspectRatio="none">
+          <polygon class="fill-white" points="2560 0 2560 100 0 100" />
         </svg>
       </div>
     </header>
 
     <!-- PROJECTS -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" data-aos="fade-up">
       <div class="container">
-        <h2 class="main-font">My <span class="text-blue main-font">Projects</span></h2>
+        <h2 class="main-font">
+          My <span class="text-blue main-font">Projects</span>
+        </h2>
 
-        <!-- Fit Journey Mobile App -->
         <div class="project-row" data-aos="fade-up">
           <div class="project-left">
-            <img src="img/fitjourney.png" alt="Fit Journey Mobile App" />
+            <img src="img/fit-journey.png" alt="Fit Journey screenshot" />
           </div>
           <div class="project-right">
-            <h3>Fit Journey</h3>
-            <ul class="tech-stack-list">
-              <p class="text-grey"><b>Technologies:</b></p>
-              <li><span class="iconify" data-icon="logos:dart" data-inline="false"></span></li>
-              <li><span class="iconify" data-icon="logos:flutter" data-inline="false"></span></li>
-              <li><span class="iconify" data-icon="logos:nodejs" data-inline="false"></span></li>
-              <li><span class="iconify" data-icon="logos:mongodb" data-inline="false"></span></li>
+            <h3>Fit Journey | Mobile Developer</h3>
+            <p class="text-grey"><em>January 2025 – May 2025</em></p>
+            <ul>
+              <li>
+                Designed and implemented core features in Flutter (Dart) and
+                Xcode for iOS, including workout streak tracking, in-app notes,
+                and daily status updates
+              </li>
+              <li>
+                Integrated RESTful APIs to synchronize user data between the
+                mobile client and Node.js/Express back end, reducing sync errors
+                by 30%
+              </li>
+              <li>
+                Collaborated with one other mobile developer within a Scrum
+                team of seven—facilitating sprint planning, daily stand-ups,
+                and peer code reviews
+              </li>
+              <li>
+                Established automated build & deployment pipelines using
+                GitHub and TestFlight, enabling faster, more reliable releases
+              </li>
             </ul>
-            <p>
-              A beginner-friendly workout tracker built in Flutter (Dart) with workout-streak tracking, notes, and daily status updates. Integrated RESTful Node.js/Express APIs and MongoDB to sync user data, reducing sync errors by 30%.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/brettr7388/fit-journey" class="btn-blue-outline btn-small" target="_blank">
-                <i class="fab fa-github"></i> Code
-              </a>
-            </div>
           </div>
         </div>
-
-        <!-- Disney Park Reservation -->
-        <div class="project-row" data-aos="fade-up">
-          <div class="project-left">
-            <img src="img/disney-reservation.png" alt="Disney Park Reservation System" />
-          </div>
-          <div class="project-right">
-            <h3>Disney Park Reservation</h3>
-            <ul class="tech-stack-list">
-              <p class="text-grey"><b>Technologies:</b></p>
-              <li><span class="iconify" data-icon="logos:react" data-inline="false"></span></li>
-              <li><span class="iconify" data-icon="logos:nodejs" data-inline="false"></span></li>
-              <li><span class="iconify" data-icon="logos:express" data-inline="false"></span></li>
-              <li><span class="iconify" data-icon="logos:mongodb" data-inline="false"></span></li>
-            </ul>
-            <p>
-              A full-stack reservation system with React.js frontend and Node.js/Express/MongoDB backend for creating and managing event reservations. Designed for scalability and CORS-safe communication.
-            </p>
-            <div class="project-links">
-              <a href="https://github.com/brettr7388/disney-park-reservation" class="btn-blue-outline btn-small mx-1" target="_blank">
-                <i class="fab fa-github"></i> Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Blastin’ Off Games (Roblox) -->
-        <div class="project-row" data-aos="fade-up">
-          <div class="project-left">
-            <img src="img/roblox-games.png" alt="Blastin' Off Games on Roblox" />
-          </div>
-          <div class="project-right">
-            <h3>Blastin’ Off Games (Roblox)</h3>
-            <ul class="tech-stack-list">
-              <p class="text-grey"><b>Technologies:</b></p>
-              <li><span class="iconify" data-icon="logos:lua" data-inline="false"></span></li>
-              <li><span class="iconify" data-icon="logos:roblox" data-inline="false"></span></li>
-            </ul>
-            <p>
-              Creator and scripter of multiple adventure obbys in Roblox Studio (Lua), reaching over 340,000 unique visitors. Developed dynamic quests, GUIs, and in-game monetization mechanics.
-            </p>
-            <div class="project-links">
-              <a href="https://www.roblox.com/users/YourUserId/profile" class="btn-blue btn-small hover-bg-light" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Play
-              </a>
-            </div>
-          </div>
-        </div>
+        <!-- Add more .project-row items here as needed -->
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="education"> <!-- reuse education styles or create new SCSS -->
+    <section id="experience" class="experience">
       <div class="container">
-        <h2 class="main-font" data-aos="fade-in">My <span class="text-blue main-font">Experience</span></h2>
+        <h2 class="main-font">
+          <span class="text-blue">Experience</span>
+        </h2>
 
-        <div class="education-card" data-aos="zoom-in">
-          <div class="education-card-column">
-            <div class="card-column-image">
-              <img src="img/pediatrix-logo.png" alt="Pediatrix" />
-            </div>
-            <div class="card-column-large">
-              <h4 class="education-year">May–Aug 2023</h4>
-              <h4>Pediatrix | Software Engineering Intern</h4>
-              <ul>
-                <li>Adopted Test-Driven Development (TDD) in Python with VS Code, reducing post-deployment bugs by 40%.</li>
-                <li>Corrected a 10,000+ record SQL database with Linux scripting to improve communication accuracy.</li>
-                <li>Containerized microservices in Docker, streamlined DevOps workflows.</li>
-              </ul>
-            </div>
-          </div>
+        <h3>Professional Experience</h3>
+
+        <div class="experience-item" data-aos="fade-up">
+          <h4>
+            Universal Orlando Resort | Digital Product Ownership Intern
+            <span class="text-grey"><em>June 2025 – August 2025</em></span>
+          </h4>
+          <ul>
+            <li>
+              Supported end-to-end product lifecycle for data-driven features
+              across Universal Parks & Resorts
+            </li>
+            <li>
+              Drove feature definition (functional/non-functional requirements)
+              with a focus on data requirements and ETL processes
+            </li>
+            <li>
+              Defined and documented user stories to enable design, development,
+              and testing
+            </li>
+            <li>
+              Participated in Agile ceremonies (sprint planning, stand-ups,
+              retrospectives)
+            </li>
+            <li>
+              Gained exposure to database management (SQL), ETL pipelines, and
+              R programming for data products
+            </li>
+          </ul>
         </div>
 
-        <div class="education-card" data-aos="zoom-in">
-          <div class="education-card-column">
-            <div class="card-column-image">
-              <img src="img/universal-logo.png" alt="Universal Orlando Resort" />
-            </div>
-            <div class="card-column-large">
-              <h4 class="education-year">Jun–Aug 2025</h4>
-              <h4>Universal Orlando Resort | Digital Product Ownership Intern</h4>
-              <ul>
-                <li>Defined ETL requirements and wrote detailed user stories for data-driven features.</li>
-                <li>Participated in Agile ceremonies and collaborated with PMs and stakeholders.</li>
-                <li>Gained exposure to SQL database design and R programming for analytics.</li>
-              </ul>
-            </div>
-          </div>
+        <div class="experience-item" data-aos="fade-up">
+          <h4>
+            PEDIATRIX | Intern
+            <span class="text-grey"><em>May 2023 – August 2023</em></span>
+          </h4>
+          <ul>
+            <li>
+              Collaborated on Test-Driven Development (TDD) in Python, reducing
+              post-deployment bugs
+            </li>
+            <li>
+              Analyzed and corrected 10,000+ outdated emails via SQL queries &
+              Linux scripts
+            </li>
+            <li>Containerized applications with Docker in a DevOps environment</li>
+            <li>
+              Managed 50+ ServiceNow support tickets—troubleshooting software
+              issues and training end users
+            </li>
+          </ul>
+        </div>
+
+        <h3>Campus Involvement</h3>
+
+        <div class="experience-item" data-aos="fade-up">
+          <h4>
+            UCF Research | Undergraduate CS Department Researcher
+            <span class="text-grey"><em>May 2024 – May 2025</em></span>
+          </h4>
+          <ul>
+            <li>
+              Designed and implemented ML models (regression, decision trees,
+              XGBoost) in Python on a 10,000+ patient CGM dataset
+            </li>
+            <li>
+              Presented data-driven insights to AdventHealth executives,
+              influencing diabetes care strategies
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-item" data-aos="fade-up">
+          <h4>
+            EXCEL Program Mentor | UCF Paid Mentor
+            <span class="text-grey"><em>April 2024 – Present</em></span>
+          </h4>
+          <ul>
+            <li>
+              Mentored 40+ undecided freshmen on selecting STEM majors
+            </li>
+            <li>
+              Organized 3+ networking events for 100+ incoming STEM students
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-item" data-aos="fade-up">
+          <h4>
+            Concepts in Computer Science | UCF Teaching Assistant
+            <span class="text-grey"><em>August 2024 – Present</em></span>
+          </h4>
+          <ul>
+            <li>
+              Evaluated and graded assignments for 700+ students, ensuring
+              fairness
+            </li>
+            <li>
+              Provided detailed feedback to improve understanding of core
+              coding concepts
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="skills">
-      <div class="seperator-skew-top">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-      <div class="container" data-aos="fade-in"> 
-        <h2 class="text-white main-font">Technical <span class="text-blue main-font">Skills</span></h2>
-        <ul class="skills-icons">
-          <li><span class="iconify" data-icon="logos:python" data-inline="false"></span><span>Python</span></li>
-          <li><span class="iconify" data-icon="logos:dart" data-inline="false"></span><span>Dart</span></li>
-          <li><span class="iconify" data-icon="logos:javascript" data-inline="false"></span><span>JavaScript</span></li>
-          <li><span class="iconify" data-icon="logos:java" data-inline="false"></span><span>Java</span></li>
-          <li><span class="iconify" data-icon="logos:lua" data-inline="false"></span><span>Lua</span></li>
-          <li><span class="iconify" data-icon="logos:flutter" data-inline="false"></span><span>Flutter</span></li>
-          <li><span class="iconify" data-icon="logos:nodejs" data-inline="false"></span><span>Node.js</span></li>
-          <li><span class="iconify" data-icon="logos:react" data-inline="false"></span><span>React.js</span></li>
-          <li><span class="iconify aws-logo" data-icon="logos:aws" data-inline="false"></span><span>AWS</span></li>
-          <li><span class="iconify" data-icon="logos:mongodb" data-inline="false"></span><span>MongoDB</span></li>
-          <li><span class="iconify" data-icon="vscode-icons:file-type-scss2" data-inline="false"></span><span>SCSS</span></li>
-          <li><span class="iconify" data-icon="flat-color-icons:linux" data-inline="false"></span><span>Linux</span></li>
-        </ul>
-      </div>
-      <div class="seperator-skew-bottom">
-        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none">
-          <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-    </section>
+<!-- SKILLS -->
+<section id="skills" class="skills">
+  <div class="seperator-skew-top">
+    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+
+  <div class="container" data-aos="fade-in">
+    <h2 class="text-white main-font">
+      Technical <span class="text-blue main-font">Skills</span>
+    </h2>
+
+    <ul class="skills-icons">
+      <!-- Languages -->
+      <li>
+        <span class="iconify" data-icon="logos:python" data-inline="false"></span>
+        <span>Python</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="vscode-icons:file-type-c" data-inline="false"></span>
+        <span>C</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:c-plusplus" data-inline="false"></span>
+        <span>C++</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:c-sharp" data-inline="false"></span>
+        <span>C#</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:lua" data-inline="false"></span>
+        <span>Lua</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:java" data-inline="false"></span>
+        <span>Java</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="vscode-icons:file-type-html" data-inline="false"></span>
+        <span>HTML</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="vscode-icons:file-type-css" data-inline="false"></span>
+        <span>CSS</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:javascript" data-inline="false"></span>
+        <span>JavaScript</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:haskell" data-inline="false"></span>
+        <span>Haskell</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:php" data-inline="false"></span>
+        <span>PHP</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:dart" data-inline="false"></span>
+        <span>Dart</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="vscode-icons:file-type-typescript-official" data-inline="false"></span>
+        <span>TypeScript</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:mysql" data-inline="false"></span>
+        <span>MySQL</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:react" data-inline="false"></span>
+        <span>React</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:nodejs-icon" data-inline="false"></span>
+        <span>Node.js</span>
+      </li>
+
+      <!-- Tools & Tech -->
+      <li>
+        <span class="iconify" data-icon="logos:github" data-inline="false"></span>
+        <span>GitHub</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:azure" data-inline="false"></span>
+        <span>Azure</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:docker" data-inline="false"></span>
+        <span>Docker</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="logos:visual-studio-code" data-inline="false"></span>
+        <span>VS Code</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="simple-icons:azuredevops" data-inline="false"></span>
+        <span>DevOps</span>
+      </li>
+      <li>
+        <span class="iconify" data-icon="mdi:web" data-inline="false"></span>
+        <span>Website Design</span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="seperator-skew-bottom">
+    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+</section>
+
+
+
 
     <!-- EDUCATION -->
     <section id="education" class="education">
       <div class="container">
-        <h2 class="main-font" data-aos="fade-in">My <span class="text-blue main-font">Education</span></h2>
+        <h2 class="main-font">
+          My <span class="text-blue main-font">Education</span>
+        </h2>
         <div class="education-card" data-aos="zoom-in">
           <div class="education-card-column">
             <div class="card-column-image">
-              <img src="img/ucf-knight.png" alt="UCF Logo" />
+              <img src="img/ucf-knight.png" alt="UCF Knight" />
             </div>
             <div class="card-column-large">
-              <h4 class="education-year">2022 – 2026</h4>
+              <h4 class="education-year">2022–2026</h4>
               <h4>University of Central Florida</h4>
-              <p>B.S. Computer Science, GPA 3.8 (Dean’s List)</p>
+              <p>Bachelor of Science in Computer Science, GPA 3.8 (Dean’s List)</p>
               <ul>
-                <li>EXCEL & COMPASS Mentor, HACK@UCF, Tennis Club</li>
-                <li>TA for Concepts in Computer Science (Python & Data Structures)</li>
+                <li>Campus Involvement: HACK@UCF, Tennis Club, EXCEL, COMPASS</li>
+                <li>Relevant Coursework: Discrete Math, Systems Software, Data Structures</li>
               </ul>
             </div>
           </div>
@@ -278,22 +455,31 @@
     <!-- CONTACT -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2 class="section-title main-font" data-aos="fade-in">Contact <span class="text-blue main-font">Me</span></h2>
+        <h2 class="section-title main-font" data-aos="fade-in">
+          Contact <span class="text-blue main-font">Me</span>
+        </h2>
         <div class="card-container">
           <div class="card" data-aos="fade-in">
             <i class="fas fa-envelope"></i>
             <h3>Email</h3>
-            <p><a href="mailto:brettr7388@gmail.com">brettr7388@gmail.com</a></p>
+            <p>brettr7388@gmail.com</p>
           </div>
           <div class="card" data-aos="fade-in" data-aos-delay="100">
             <i class="fab fa-github"></i>
             <h3>GitHub</h3>
-            <a href="https://github.com/brettr7388" class="text-blue" target="_blank">brettr7388</a>
+            <a href="https://github.com/brettr7388" class="text-blue" target="_blank"
+              >brettr7388</a
+            >
           </div>
           <div class="card" data-aos="fade-in" data-aos-delay="200">
             <i class="fab fa-linkedin"></i>
             <h3>LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/brett-rosenberg7388" class="text-blue" target="_blank">brett-rosenberg7388</a>
+            <a
+              href="https://www.linkedin.com/in/brett-rosenberg7388"
+              class="text-blue"
+              target="_blank"
+              >brett-rosenberg7388</a
+            >
           </div>
         </div>
       </div>
@@ -305,9 +491,17 @@
         <div class="footer-flex">
           <img src="img/logo.png" alt="logo" id="logo-footer" />
           <div class="footer-icon-links">
-            <a href="https://github.com/brettr7388" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-            <a href="https://www.linkedin.com/in/brett-rosenberg7388" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="mailto:brettr7388@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+            <a href="https://github.com/brettr7388" target="_blank"
+              ><i class="fab fa-github fa-2x"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/brett-rosenberg7388"
+              target="_blank"
+              ><i class="fab fa-linkedin fa-2x"></i
+            ></a>
+            <a href="mailto:brettr7388@gmail.com"
+              ><i class="fas fa-envelope fa-2x"></i
+            ></a>
           </div>
         </div>
       </div>
@@ -318,15 +512,24 @@
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+    ></script>
     <script>
-      particlesJS.load('particles-js', './particles.json', () => console.log('particles loaded'));
-      particlesJS.load('skills', './particles.json', () => {});
-      particlesJS.load('footer', './particles.json', () => {});
+      particlesJS.load("particles-js", "particles.json", function () {
+        console.log("particles loaded");
+      });
+      particlesJS.load("skills", "particles.json");
+      particlesJS.load("footer", "particles.json");
     </script>
     <script defer src="js/app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
