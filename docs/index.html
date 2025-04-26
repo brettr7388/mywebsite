@@ -29,7 +29,7 @@
       integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
       crossorigin="anonymous"
     />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <link rel="icon" href="img/" type="image/png" />
 
     <!-- AOS animations -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -44,10 +44,21 @@
         <nav id="nav" data-aos="fade-in">
           <div class="container nav-container">
             <a href="index.html" id="logo">
-              <img src="img/logo.png" alt="logo" />
+              <div class="logo-wrapper">
+                <img
+                  src="img/Brett.jpeg"
+                  alt="Brett Rosenberg logo"
+                  id="header-logo"
+                />
+                <span class="wave-emoji" role="img" aria-label="waving hand">
+                  👋
+                </span>
+              </div>
             </a>
             <ul class="hide-for-mobile nav-links flex">
-              <li><a href="#header" class="link"><i class="fas fa-home"></i> Home</a></li>
+              <li>
+                <a href="#header" class="link"><i class="fas fa-home"></i> Home</a>
+              </li>
               <li>
                 <a href="#projects" class="link"><i class="fas fa-code"></i>
                   Projects</a
@@ -154,160 +165,150 @@
         </svg>
       </div>
     </header>
-
     <!-- PROJECTS -->
-    <section id="projects" class="projects" data-aos="fade-up">
-      <div class="container">
-        <h2 class="main-font">
-          My <span class="text-blue main-font">Projects</span>
-        </h2>
+<section id="projects" class="projects" data-aos="fade-up">
+  <div class="container">
+    <h2 class="main-font">
+      My <span class="text-blue main-font">Projects</span>
+    </h2>
 
-        <div class="project-row" data-aos="fade-up">
-          <div class="project-left">
-            <img src="img/fit-journey.png" alt="Fit Journey screenshot" />
-          </div>
-          <div class="project-right">
-            <h3>Fit Journey | Mobile Developer</h3>
-            <p class="text-grey"><em>January 2025 – May 2025</em></p>
-            <ul>
-              <li>
-                Designed and implemented core features in Flutter (Dart) and
-                Xcode for iOS, including workout streak tracking, in-app notes,
-                and daily status updates
-              </li>
-              <li>
-                Integrated RESTful APIs to synchronize user data between the
-                mobile client and Node.js/Express back end, reducing sync errors
-                by 30%
-              </li>
-              <li>
-                Collaborated with one other mobile developer within a Scrum
-                team of seven—facilitating sprint planning, daily stand-ups,
-                and peer code reviews
-              </li>
-              <li>
-                Established automated build & deployment pipelines using
-                GitHub and TestFlight, enabling faster, more reliable releases
-              </li>
-            </ul>
-          </div>
+    <div class="project-grid">
+      <!-- Fit Journey Card -->
+      <div class="project-card" data-aos="fade-up">
+        <h3>Fit Journey | Mobile Developer</h3>
+        <p class="text-grey"><em>Jan 2025 – May 2025</em></p>
+
+        <p class="made-with">Made with:</p>
+        <ul class="tech-stack-list">
+          <li><span class="iconify" data-icon="logos:dart" data-inline="false"></span></li>
+          <li><span class="iconify" data-icon="logos:flutter" data-inline="false"></span></li>
+          <li><span class="iconify" data-icon="logos:nodejs-icon" data-inline="false"></span></li>
+        </ul>
+
+        <ul class="project-features">
+          <li>Workout-streak tracking, in-app notes, daily status updates (Flutter/Dart)</li>
+          <li>RESTful sync with Node.js/Express back end (−30% sync errors)</li>
+          <li>Scrum team collaboration: sprint planning, stand-ups, code reviews</li>
+          <li>Automated build/deploy pipelines with GitHub & TestFlight</li>
+        </ul>
+
+        <div class="project-links">
+          <a href="https://www.youtube.com/shorts/gYt-E7a0xuE" class="btn-blue btn-small">
+            <i class="fab fa-youtube"></i> Demo
+          </a>
+          <a href="https://github.com/Hasini-D/LargeProject" class="btn-blue-outline btn-small">
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
-        <!-- Add more .project-row items here as needed -->
       </div>
-    </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="experience">
-      <div class="container">
-        <h2 class="main-font">
-          <span class="text-blue">Experience</span>
-        </h2>
+      <!-- Roblox Games Card -->
+      <div class="project-card" data-aos="fade-up">
+        <h3>Roblox Games | Designer &amp; Scripter</h3>
+        <p class="text-grey"><em>Dec 2022 – Present</em></p>
 
-        <h3>Professional Experience</h3>
+        <p class="made-with">Made with:</p>
+        <ul class="tech-stack-list">
+          <li><span class="iconify" data-icon="logos:lua" data-inline="false"></span></li>
+          <li><span class="iconify" data-icon="simple-icons:roblox" data-inline="false"></span></li>
+        </ul>
 
-        <div class="experience-item" data-aos="fade-up">
-          <h4>
-            Universal Orlando Resort | Digital Product Ownership Intern
-            <span class="text-grey"><em>June 2025 – August 2025</em></span>
-          </h4>
+        <ul class="project-features">
+          <li>Dynamic adventure games with Lua scripting & GUIs</li>
+          <li>Multi-level challenges, in-game monetization, player animations</li>
+          <li>340K+ visitors, 2K+ active players via analytics-driven marketing</li>
+        </ul>
+      </div>
+
+      <!-- [add more cards here if desired] -->
+
+    </div>
+  </div>
+</section>
+
+
+
+     <!-- EXPERIENCE AS VERTICAL TIMELINE -->
+<section id="experience" class="experience">
+  <div class="container">
+    <h2 class="main-font"><span class="text-blue">Experience</span></h2>
+
+    <div class="timeline">
+      <!-- 1. Universal Orlando Resort -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h4>Universal Orlando Resort<br><small>Digital Product Ownership Intern</small></h4>
           <ul>
-            <li>
-              Supported end-to-end product lifecycle for data-driven features
-              across Universal Parks & Resorts
-            </li>
-            <li>
-              Drove feature definition (functional/non-functional requirements)
-              with a focus on data requirements and ETL processes
-            </li>
-            <li>
-              Defined and documented user stories to enable design, development,
-              and testing
-            </li>
-            <li>
-              Participated in Agile ceremonies (sprint planning, stand-ups,
-              retrospectives)
-            </li>
-            <li>
-              Gained exposure to database management (SQL), ETL pipelines, and
-              R programming for data products
-            </li>
+            <li>Supported end-to-end product lifecycle for data-driven features across Universal Parks & Resorts</li>
+            <li>Drove feature definition (functional/non-functional requirements) and ETL process design</li>
+            <li>Defined and documented user stories to drive design, development & testing</li>
+            <li>Participated in Agile ceremonies (sprint planning, stand-ups, retrospectives)</li>
+            <li>Exposure to SQL, ETL pipelines & R programming for data products</li>
           </ul>
         </div>
+        <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="timeline-date">June 2025 – Aug 2025</div>
+      </div>
 
-        <div class="experience-item" data-aos="fade-up">
-          <h4>
-            PEDIATRIX | Intern
-            <span class="text-grey"><em>May 2023 – August 2023</em></span>
-          </h4>
+      <!-- 2. UCF Teaching Assistant -->
+      <div class="timeline-item">
+        <div class="timeline-date">Aug 2024 – Present</div>
+        <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="timeline-content">
+          <h4>UCF Teaching Assistant<br><small>Concepts in CS</small></h4>
           <ul>
-            <li>
-              Collaborated on Test-Driven Development (TDD) in Python, reducing
-              post-deployment bugs
-            </li>
-            <li>
-              Analyzed and corrected 10,000+ outdated emails via SQL queries &
-              Linux scripts
-            </li>
+            <li>Graded assignments for 700+ students, ensuring consistency & fairness</li>
+            <li>Provided detailed feedback on Python fundamentals & O-O design</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3. UCF Research -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h4>UCF Research<br><small>Undergrad CS Researcher</small></h4>
+          <ul>
+            <li>Built regression, decision tree & XGBoost models on 10,000+ patient records</li>
+            <li>Presented data-driven insights to AdventHealth executives</li>
+          </ul>
+        </div>
+        <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="timeline-date">May 2024 – May 2025</div>
+      </div>
+
+      <!-- 4. EXCEL Program Mentor -->
+      <div class="timeline-item">
+        <div class="timeline-date">April 2024 – Present</div>
+        <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="timeline-content">
+          <h4>EXCEL Program Mentor<br><small>UCF Paid Mentor</small></h4>
+          <ul>
+            <li>Mentored 40+ undecided freshmen on STEM majors</li>
+            <li>Organized 3+ networking events for 100+ incoming STEM students</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 5. PEDIATRIX -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h4>PEDIATRIX<br><small>Intern</small></h4>
+          <ul>
+            <li>Applied TDD in Python projects, reducing post-deployment bugs</li>
+            <li>Corrected 10,000+ outdated emails via SQL & Linux scripts</li>
             <li>Containerized applications with Docker in a DevOps environment</li>
-            <li>
-              Managed 50+ ServiceNow support tickets—troubleshooting software
-              issues and training end users
-            </li>
+            <li>Managed 50+ ServiceNow tickets—troubleshooting & training</li>
           </ul>
         </div>
-
-        <h3>Campus Involvement</h3>
-
-        <div class="experience-item" data-aos="fade-up">
-          <h4>
-            UCF Research | Undergraduate CS Department Researcher
-            <span class="text-grey"><em>May 2024 – May 2025</em></span>
-          </h4>
-          <ul>
-            <li>
-              Designed and implemented ML models (regression, decision trees,
-              XGBoost) in Python on a 10,000+ patient CGM dataset
-            </li>
-            <li>
-              Presented data-driven insights to AdventHealth executives,
-              influencing diabetes care strategies
-            </li>
-          </ul>
-        </div>
-
-        <div class="experience-item" data-aos="fade-up">
-          <h4>
-            EXCEL Program Mentor | UCF Paid Mentor
-            <span class="text-grey"><em>April 2024 – Present</em></span>
-          </h4>
-          <ul>
-            <li>
-              Mentored 40+ undecided freshmen on selecting STEM majors
-            </li>
-            <li>
-              Organized 3+ networking events for 100+ incoming STEM students
-            </li>
-          </ul>
-        </div>
-
-        <div class="experience-item" data-aos="fade-up">
-          <h4>
-            Concepts in Computer Science | UCF Teaching Assistant
-            <span class="text-grey"><em>August 2024 – Present</em></span>
-          </h4>
-          <ul>
-            <li>
-              Evaluated and graded assignments for 700+ students, ensuring
-              fairness
-            </li>
-            <li>
-              Provided detailed feedback to improve understanding of core
-              coding concepts
-            </li>
-          </ul>
-        </div>
+        <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+        <div class="timeline-date">May 2023 – Aug 2023</div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+
+
 
 <!-- SKILLS -->
 <section id="skills" class="skills">
@@ -436,7 +437,7 @@
         <div class="education-card" data-aos="zoom-in">
           <div class="education-card-column">
             <div class="card-column-image">
-              <img src="img/ucf-knight.png" alt="UCF Knight" />
+              <img src="img/knight.jpeg" alt="UCF Knight" />
             </div>
             <div class="card-column-large">
               <h4 class="education-year">2022–2026</h4>
@@ -489,7 +490,7 @@
     <footer id="footer" class="footer">
       <div class="container">
         <div class="footer-flex">
-          <img src="img/logo.png" alt="logo" id="logo-footer" />
+          <img src="img/BrettLogo.jpeg" alt="logo" id="logo-footer" />
           <div class="footer-icon-links">
             <a href="https://github.com/brettr7388" target="_blank"
               ><i class="fab fa-github fa-2x"></i
@@ -523,8 +524,8 @@
       particlesJS.load("particles-js", "particles.json", function () {
         console.log("particles loaded");
       });
-      particlesJS.load("skills", "particles.json");
-      particlesJS.load("footer", "particles.json");
+      //particlesJS.load("skills", "particles.json");
+      //particlesJS.load("footer", "particles.json");
     </script>
     <script defer src="js/app.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

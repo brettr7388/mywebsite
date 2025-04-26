@@ -1084,3 +1084,329 @@ header .seperator-skew svg .fill-white {
   font-size: 0.9rem;            /* same or your preferred size */
   color: #333 !important;       /* ensure it’s visible */
 }
+
+
+/* Logo wrapper in the nav */
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#header-logo {
+  width: 150px !important;            /* increase the diameter */
+  height: 150px !important;           /* keep it square for a circle */
+  border-radius: 50% !important;      /* perfect circle */
+  object-fit: cover !important;       /* fill-and-crop inside */
+  border: 4px solid #fff !important;  /* crisp white ring */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3)!important; /* optional lift */
+}
+
+/* Waving emoji at bottom-right of the logo */
+.wave-emoji {
+  position: absolute;
+  bottom: -8px;                /* pull it down a bit more */
+  right: -8px;                 /* pull it out to the right */
+  font-size: 2rem !important;/* larger hand */
+  line-height: 1;
+  display: block;
+  text-shadow: 0 0 2px rgba(0,0,0,0.6);
+}
+
+
+#logo-footer {
+  width: 60px;
+  height: 70px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* hover: scale up & slight rotate + shadow */
+#logo-footer:hover {
+  transform: scale(1.2) rotate(-5deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* click: spin once */
+#logo-footer:active {
+  animation: spin-on-click 0.6s ease;
+}
+@keyframes spin-on-click {
+  from {
+    transform: scale(1.2) rotate(-5deg);
+  }
+  to {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+/* Fit Journey circle override */
+.projects .project-row {
+  display: flex;
+  align-items: center;
+}
+
+.projects .project-row .project-left img {
+  width: 300px !important;
+  height: 300px !important;
+  object-fit: cover !important;
+  border: 0px solid #000 !important;
+  border-radius: 50% !important;            /* <-- makes it circular */
+  display: block !important;
+  margin: 0 auto !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.projects .project-row .project-left img:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+
+/* Projects grid & cards */
+.projects {
+  background: #fff;
+  padding: 3rem 0;
+}
+.projects h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;        /* vertical spacing between cards */
+}
+.project-card {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.project-card h3 {
+  margin-bottom: 0.5rem;
+}
+.project-card .text-grey em {
+  font-size: 0.9rem;
+}
+.project-card .made-with {
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+}
+.project-card .tech-stack-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+.project-card .tech-stack-list li {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+.project-card .project-features {
+  list-style: disc inside;
+  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+}
+.project-card .project-links {
+  margin-top: 0.5rem;
+}
+.project-card .project-links a {
+  margin-right: 0.5rem;
+}
+
+
+/* ------ Vertical Timeline Styles ------ */
+#experience {
+  background: white;
+  /* keep the top padding, shrink the bottom so Skills comes up closer */
+  padding: 3rem 0 0rem;
+}
+
+#experience h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* container for all items + center line */
+#experience .timeline {
+  position: relative;
+  margin: 2rem 0;
+}
+#experience .timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: #ccc;
+}
+
+/* each item */
+#experience .timeline-item {
+  margin: 4rem 0;    /* increase space between items */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* the icon centered on the line */
+#experience .timeline-item .timeline-icon {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  z-index: 2;
+  transition: transform 0.3s;
+}
+#experience .timeline-item .timeline-icon:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* content and date boxes */
+#experience .timeline-item .timeline-content,
+#experience .timeline-item .timeline-date {
+  width: 45%;
+  background: #f5f5f5;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+#experience .timeline-item .timeline-content:hover,
+#experience .timeline-item .timeline-date:hover {
+  transform: translateY(-5px);
+}
+
+/* alternate sides: odd = content left, date right */
+#experience .timeline-item:nth-child(odd) .timeline-content {
+  order: 1;
+  text-align: left;
+}
+#experience .timeline-item:nth-child(odd) .timeline-date {
+  order: 3;
+  text-align: right;
+}
+/* even = date left, content right */
+#experience .timeline-item:nth-child(even) .timeline-date {
+  order: 1;
+  text-align: left;
+}
+/* even = date left, content right */
+#experience .timeline-item:nth-child(even) .timeline-content {
+  order: 3;
+  text-align: right;   /* ← remove or comment this */
+}
+
+/* headings inside content */
+#experience .timeline-content h4 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+#experience .timeline-content h4 small {
+  display: block;
+  font-weight: normal;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* make the date box shrink to its text */
+#experience .timeline-item .timeline-date {
+  width: auto;                 /* no more fixed 45% */
+  display: inline-block;       /* shrink‐wrap its contents */
+  max-width: 40%;              /* optional cap if you have very long dates */
+  padding: 0.5rem 1rem;        /* you can tweak padding */
+}
+
+/* ensure the line‐up in flex still works */
+#experience .timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* make the date box auto-size to its contents */
+#experience .timeline-item .timeline-date {
+  width: auto;            /* don’t force 45% any more */
+  display: inline-block;  /* shrink-wrap around the text */
+}
+
+/* for odd items (date on right), push it left to ~50% of container */
+#experience .timeline-item:nth-child(odd) .timeline-date {
+  margin-right: 30%;
+}
+
+/* for even items (date on left), push it right to ~50% */
+#experience .timeline-item:nth-child(even) .timeline-date {
+  margin-left: 30%;
+}
+
+/* Always left-align the text inside our timeline content */
+#experience .timeline-content {
+  text-align: left !important;
+}
+
+#experience .timeline-content ul {
+  list-style-position: inside;
+  padding-left: 1rem;
+}
+
+/* ─── Bigger Section Titles ─── */
+section h2.main-font,
+.contact .section-title,
+#experience h2 {
+  font-size: 2.5rem;    /* or choose a size you like */
+  line-height: 1.2;
+  margin-bottom: .5rem; /* tighten up if needed */
+}
+
+/* ─── Larger Skills Icons & Labels ─── */
+.skills .skills-icons svg {
+  width: 105px;
+  height: 105px;
+}
+
+.skills .skills-icons li {
+  margin: 1.5rem;        /* give them a bit more breathing room */
+  font-size: 2rem;     /* bump up the label size */
+}
+
+.skills .skills-icons li span {
+  margin-top: 0.75rem;
+  font-size: 2rem;       /* or 1.1rem if you want them even bigger */
+}
+
+
+/* ─── Align “Skills” Title with the Rest ─── */
+.skills .container {
+  padding: 3rem 0;            /* same vertical padding as Projects, Education, etc */
+}
+
+.skills h2.main-font {
+  margin: 0 auto 1.5rem;      /* reset any extra top margin, match other sections’ bottom margin */
+  text-align: center;         /* keep it centered like the rest */
+}
+
+/* ─── Shift “Skills” Title Slightly Left ─── */
+#skills h2.main-font {
+  position: relative;
+  left: -90px; /* move left by 20px—tweak as needed */
+}
