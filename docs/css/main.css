@@ -1452,7 +1452,6 @@ section h2.main-font,
   border-radius: 1rem;      /* fully rounded ends */
   margin: 0 auto;           /* center if anything changes */
 }
-
 /* 3) Keep each link itself super snug */
 #nav .nav-links li a,
 #nav .mobile-menu-links li a {
