@@ -1410,3 +1410,53 @@ section h2.main-font,
   position: relative;
   left: -90px; /* move left by 20px—tweak as needed */
 }
+
+.education-card .card-column-image img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card .card-column-image img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.education-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =============== FIXED, TIGHT “PILL” NAV =============== */
+/* 1) Peel the <nav> off of the header so it never scrolls away */
+#nav {
+  position: fixed;          /* lock it to the viewport */
+  top: 1rem;                /* 1rem down from the top edge */
+  left: 50%;                /* center it horizontally */
+  transform: translateX(-50%);
+  z-index: 1000;            /* sit above everything else */
+  display: inline-block;    /* shrink wrap to its contents */
+  width: auto;              /* don’t ever stretch full-width */
+  padding: 0;               /* no extra padding on the nav itself */
+}
+
+/* 2) Turn the inner container into your grey, rounded pill */
+#nav > .container.nav-container {
+  display: inline-flex;     /* hug contents tightly */
+  align-items: center;
+  gap: 0.5rem;              /* a little breathing room between links */
+  padding: 0.25rem 0.75rem;  /* pill height/width */
+  background: #f0f0f0;       /* light grey background */
+  border-radius: 1rem;      /* fully rounded ends */
+  margin: 0 auto;           /* center if anything changes */
+}
+
+/* 3) Keep each link itself super snug */
+#nav .nav-links li a,
+#nav .mobile-menu-links li a {
+  padding: 0.25rem 0.5rem;   /* tiny hit-area around each word */
+  color: #000;              /* black text */
+  white-space: nowrap;      /* don’t wrap onto two lines */
+}
