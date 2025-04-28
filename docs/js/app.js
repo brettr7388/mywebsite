@@ -192,3 +192,27 @@ backToTopBtn.on("click", function (e) {
 });
 
 
+const sections = document.querySelectorAll('header[id], section[id]');
+  const navLinks = document.querySelectorAll('#nav .nav-links a, #nav .mobile-menu-links a');
+
+  function onScroll() {
+    const scrollPos = window.scrollY + window.innerHeight/3; 
+    sections.forEach(sec => {
+      const top   = sec.offsetTop;
+      const bottom= top + sec.offsetHeight;
+      const id    = sec.getAttribute('id');
+
+      if (scrollPos >= top && scrollPos < bottom) {
+        navLinks.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', onScroll);
+  // run once on load
+  onScroll();
+
+
+

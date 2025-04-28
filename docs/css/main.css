@@ -391,6 +391,7 @@ header nav .nav-container .nav-links a {
   letter-spacing: 2px;
   color: white;
 }
+/*
 header nav .nav-container .nav-links .link::after {
   content: "";
   position: relative;
@@ -405,6 +406,7 @@ header nav .nav-container .nav-links .link::after {
 header nav .nav-container .nav-links .link:hover::after {
   width: 100%;
 }
+  */
 header nav .mobile-menu {
   position: relative;
   z-index: 1000;
@@ -1093,8 +1095,8 @@ header .seperator-skew svg .fill-white {
 }
 
 #header-logo {
-  width: 150px !important;            /* increase the diameter */
-  height: 150px !important;           /* keep it square for a circle */
+  width: 100px !important;            /* increase the diameter */
+  height: 100px !important;           /* keep it square for a circle */
   border-radius: 50% !important;      /* perfect circle */
   object-fit: cover !important;       /* fill-and-crop inside */
   border: 4px solid #fff !important;  /* crisp white ring */
@@ -1104,7 +1106,7 @@ header .seperator-skew svg .fill-white {
 /* Waving emoji at bottom-right of the logo */
 .wave-emoji {
   position: absolute;
-  bottom: -8px;                /* pull it down a bit more */
+  bottom: -2px;                /* pull it down a bit more */
   right: -8px;                 /* pull it out to the right */
   font-size: 2rem !important;/* larger hand */
   line-height: 1;
@@ -1459,3 +1461,125 @@ section h2.main-font,
   color: #000;              /* black text */
   white-space: nowrap;      /* don’t wrap onto two lines */
 }
+
+
+
+
+
+
+
+
+
+/* 2) Tighter container padding & smaller text */
+#nav > .container.nav-container {
+  padding: 0.2rem 0.5rem;    /* less “breathing room” */
+  gap: 0.5rem;               /* smaller gap between items */
+}
+#nav .nav-links a,
+#nav .mobile-menu-links a {
+  font-size: 0.875rem;       /* smaller link text */
+  padding: 0.2rem 0.4rem;    /* less padding around each link */
+}
+
+/* 3) Hide all <i> icons in the nav */
+#nav .nav-links i,
+#nav .mobile-menu-links i {
+  display: none !important;
+}
+
+/* kill the bullets & indentation on both desktop + mobile nav lists */
+#nav .nav-links,
+#nav .mobile-menu-links {
+  list-style: none;    /* no bullets */
+  margin: 0;           /* remove default outer spacing */
+  padding: 0;          /* remove default left‐indent */
+}
+
+
+/* how the current-section link looks */
+#nav .nav-links a.active,
+#nav .mobile-menu-links a.active {
+  background: #ddd;     /* light grey pill */
+  color: #000;          /* black text */
+  border-radius: 0.5rem;
+}
+
+/* make sure there’s no hover effect */
+#nav .nav-links a:hover,
+#nav .mobile-menu-links a:hover {
+  background: none;
+  text-decoration: none;
+}
+
+/* ─── Base timeline styles (desktop) ─── */
+/* (you already have this) */
+
+/* ─── Responsive override ─── */
+@media (max-width: 768px) {
+  /* 1) Make the vertical line hug the left edge */
+  #experience .timeline::before {
+    left: 1rem;
+  }
+
+  /* 2) Stack each item instead of side-by-side */
+  #experience .timeline-item {
+    display: block;
+    margin: 3rem 0;
+    padding-left: 2.5rem;  /* give space for the icon */
+  }
+
+  /* 3) Reposition the icon on the left of each block */
+  #experience .timeline-item .timeline-icon {
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    transform: translateY(0);
+  }
+
+  /* 4) Make both date & content full-width, normal flow */
+  #experience .timeline-item .timeline-date,
+  #experience .timeline-item .timeline-content {
+    position: relative;
+    width: auto;
+    display: block;
+    margin: 0.5rem 0;
+    text-align: left;
+    padding: 0.75rem 1rem;
+  }
+
+  /* 5) Turn off the odd/even ordering tricks */
+  #experience .timeline-item:nth-child(odd)  .timeline-content,
+  #experience .timeline-item:nth-child(odd)  .timeline-date,
+  #experience .timeline-item:nth-child(even) .timeline-content,
+  #experience .timeline-item:nth-child(even) .timeline-date {
+    order: unset !important;
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* ensure the icon is an inline-block so transform works */
+.skills-icons li span.iconify {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* scale the icon up on hover */
+.skills-icons li:hover span.iconify {
+  transform: scale(1.3);
+}
+
+
+/* make sure the Iconify SVGs can be scaled */
+.skills .skills-icons li span.iconify {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.2s ease;
+}
+
+/* on hover, bump the icon up by 20% */
+.skills .skills-icons li:hover span.iconify {
+  transform: scale(1.2);
+}
+
