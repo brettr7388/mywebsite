@@ -1619,3 +1619,58 @@ section h2.main-font,
 
 
 
+
+
+
+
+@media screen and (max-width: 999px) {
+  /* Show only your mobile menu on small screens */
+  #nav .nav-links {
+    display: none !important;
+  }
+  #nav .mobile-menu.hide-for-desktop {
+    display: block !important;
+  }
+
+  /* Make the fixed nav pill go full-width on mobile */
+  #nav {
+    position: fixed;    /* stay pinned */
+    top: 0;
+    left: 0;
+    transform: none;    /* cancel the translateX(-50%) */
+    width: 100%;        /* full viewport width */
+    padding: 0.5rem 0;  /* optional breathing room */
+  }
+
+  /* Reset the inner nav-container pill for mobile */
+  #nav > .container.nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background: #f0f0f0;
+    border-radius: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Make the mobile-menu’s own container span 100% */
+  #nav .mobile-menu .container {
+    max-width: none;
+    width: 100%;
+    padding: 0 1rem;  /* match your page gutters */
+  }
+
+  /* Spread the menu links evenly */
+  #nav .mobile-menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  /* Tidy up link padding/text size */
+  #nav .mobile-menu-links a {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+}
