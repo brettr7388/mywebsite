@@ -1622,55 +1622,49 @@ section h2.main-font,
 
 
 
+/* 1) By default: hide the mobile header */
+.mobile-header {
+  display: none;
+}
 
-@media screen and (max-width: 999px) {
-  /* Show only your mobile menu on small screens */
-  #nav .nav-links {
+/* 2) On small screens, hide the old desktop nav and show the new one */
+@media screen and (max-width: 768px) {
+  /* Hide your existing desktop header/nav */
+  header#header,
+  #nav,
+  .socials {
     display: none !important;
   }
-  #nav .mobile-menu.hide-for-desktop {
-    display: block !important;
-  }
 
-  /* Make the fixed nav pill go full-width on mobile */
-  #nav {
-    position: fixed;    /* stay pinned */
+  /* Show our new mobile header */
+  .mobile-header {
+    display: block;
+    position: fixed;
     top: 0;
     left: 0;
-    transform: none;    /* cancel the translateX(-50%) */
-    width: 100%;        /* full viewport width */
-    padding: 0.5rem 0;  /* optional breathing room */
+    width: 100%;
+    background: #181a1b;      /* or your preferred color */
+    padding: 0.5rem 1rem;
+    z-index: 1000;
   }
 
-  /* Reset the inner nav-container pill for mobile */
-  #nav > .container.nav-container {
+  /* Style the nav list */
+  .mobile-header .mobile-nav-list {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    background: #f0f0f0;
-    border-radius: 0;
-    width: 100%;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
     padding: 0;
   }
-
-  /* Make the mobile-menu’s own container span 100% */
-  #nav .mobile-menu .container {
-    max-width: none;
-    width: 100%;
-    padding: 0 1rem;  /* match your page gutters */
-  }
-
-  /* Spread the menu links evenly */
-  #nav .mobile-menu-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  /* Tidy up link padding/text size */
-  #nav .mobile-menu-links a {
-    padding: 0.3rem 0.6rem;
+  .mobile-header .mobile-nav-list li a {
+    color: #fff;              /* link color */
     font-size: 0.9rem;
+    text-transform: uppercase;
     white-space: nowrap;
+  }
+
+  /* push page content down so it’s not hidden behind the fixed bar */
+  body {
+    padding-top: 3.5rem;      /* = header height + a little breathing room */
   }
 }
