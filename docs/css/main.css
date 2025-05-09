@@ -1620,51 +1620,55 @@ section h2.main-font,
 
 
 
-
-
-/* 1) By default: hide the mobile header */
-.mobile-header {
-  display: none;
-}
-
-/* 2) On small screens, hide the old desktop nav and show the new one */
+/* hide desktop header/nav on phones, show our mini mobile header */
 @media screen and (max-width: 768px) {
-  /* Hide your existing desktop header/nav */
+  /* 1) hide your big desktop header (hero + nav + socials) */
   header#header,
   #nav,
   .socials {
     display: none !important;
   }
 
-  /* Show our new mobile header */
+  /* 2) show our new mobile header */
   .mobile-header {
-    display: block;
+    display: flex;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #181a1b;      /* or your preferred color */
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0;
+    background: transparent;
     z-index: 1000;
   }
 
-  /* Style the nav list */
+  /* 3) give the inner <nav> a pill-shaped white background */
+  .mobile-header nav {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 0.5rem 1rem;
+    display: inline-flex;
+    gap: 1rem;
+    margin: 0 1rem;
+  }
+
+  /* 4) style the link list inside that nav */
   .mobile-header .mobile-nav-list {
-    display: flex;
-    justify-content: space-around;
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
   }
   .mobile-header .mobile-nav-list li a {
-    color: #fff;              /* link color */
+    color: #333;
     font-size: 0.9rem;
     text-transform: uppercase;
     white-space: nowrap;
   }
 
-  /* push page content down so it’s not hidden behind the fixed bar */
+  /* 5) push the page content down so it isn’t hidden */
   body {
-    padding-top: 3.5rem;      /* = header height + a little breathing room */
+    padding-top: 3.25rem;  /* height of that fixed bar */
   }
 }
