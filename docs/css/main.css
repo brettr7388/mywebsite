@@ -29,6 +29,11 @@ a {
   color: white;
 }
 
+/* Add specific style for Babysteps Cloud link */
+a[href*="babysteps-cloud"] {
+  color: #3b82f6 !important;
+}
+
 /* Utility Classes */
 .main-font {
   font-family: "Nunito", sans-serif;
@@ -555,7 +560,7 @@ header .hero .hero-btns {
   margin: 0 auto 1.5rem;
   text-align: center;
   position: relative;
-  left: -90px;
+  left: 0;
 }
 
 .skills .skills-icons {
