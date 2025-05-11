@@ -868,19 +868,38 @@ header .hero .hero-btns {
   }
   
   header nav .container {
-    padding-bottom: 0.75rem;
+    padding: 0.5rem;
+    width: 100%;
   }
   
   header nav .nav-container {
     justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5rem;
   }
   
   header .hero {
     top: 55%;
+    width: 100%;
+    padding: 0 1rem;
   }
   
   header .socials {
     display: none;
+  }
+
+  #nav {
+    width: 100%;
+    left: 0;
+    transform: none;
+    top: 0;
+  }
+
+  #nav > .container.nav-container {
+    width: 100%;
+    justify-content: center;
+    border-radius: 0;
   }
 }
 
@@ -892,11 +911,19 @@ header .hero .hero-btns {
 
 @media screen and (max-width: 768px) {
   .hero {
-    width: 90%;
+    width: 100%;
+    padding: 0 1rem;
   }
   
   header nav .nav-container #logo img {
-    width: 200px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .wave-emoji {
+    font-size: 1.5rem !important;
+    bottom: 0;
+    right: -5px;
   }
   
   #experience .timeline::before {
@@ -942,6 +969,7 @@ header .hero .hero-btns {
   header .hero p {
     white-space: normal !important;
     word-break: break-word;
+    padding: 0 0.5rem;
   }
   
   header .hero h1 {
@@ -952,6 +980,32 @@ header .hero .hero-btns {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .mobile-menu {
+    width: 100%;
+    background: #f0f0f0;
+    padding: 0.5rem;
+  }
+
+  .mobile-menu .container {
+    padding: 0;
+  }
+
+  .mobile-menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .mobile-menu-links li {
+    margin: 0 !important;
+  }
+
+  .mobile-menu-links a {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.9rem !important;
   }
   
   .footer .footer-flex {
