@@ -599,20 +599,22 @@ header .hero .hero-btns {
   transform: scale(1.1);
 }
 
-.skills .skills-icons li:hover svg {
-  transform: scale(1.1);
-}
-
-.skills .skills-icons li:hover span:not(.iconify) {
-  transform: scale(1.1);
-}
-
-.skills .skills-icons .iconify {
+/* Target the Iconify icons specifically */
+.skills .skills-icons li span[data-icon] {
   display: inline-block;
   transition: all 0.3s ease;
 }
 
-.skills .skills-icons li:hover .iconify {
+.skills .skills-icons li:hover span[data-icon] {
+  transform: scale(1.1);
+}
+
+/* Target the text span specifically */
+.skills .skills-icons li span:not([data-icon]) {
+  transition: all 0.3s ease;
+}
+
+.skills .skills-icons li:hover span:not([data-icon]) {
   transform: scale(1.1);
 }
 
