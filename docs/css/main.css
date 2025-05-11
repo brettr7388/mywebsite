@@ -570,35 +570,35 @@ header .hero .hero-btns {
 }
 
 .skills .skills-icons svg {
-  width: 105px;
-  height: 105px;
+  width: 65px;
+  height: 65px;
   margin: 0.5rem;
+  transition: transform 0.3s ease;
 }
 
 .skills .skills-icons li {
-  margin: 1.5rem;
-  font-size: 2rem;
+  margin: 1rem;
+  font-size: 1.2rem;
   color: #333 !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease;
 }
 
 .skills .skills-icons li span {
-  margin-top: 0.75rem;
-  font-size: 2rem;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
   color: #333 !important;
 }
 
-.skills .skills-icons li span.iconify {
-  display: inline-block;
-  transform-origin: center center;
-  transition: transform 0.2s ease;
+.skills .skills-icons li:hover {
+  transform: scale(1.1);
 }
 
 .skills .skills-icons li:hover span.iconify {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* Education Section */
@@ -801,8 +801,8 @@ header .hero .hero-btns {
 }
 
 .footer .footer-flex #logo-footer {
-  width: 60px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border: 2px solid #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
