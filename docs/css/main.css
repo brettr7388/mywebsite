@@ -420,7 +420,6 @@ header .hero .hero-btns {
 #experience .timeline {
   position: relative;
   margin: 2rem 0;
-  padding: 0 2rem;
 }
 
 #experience .timeline::before {
@@ -432,7 +431,6 @@ header .hero .hero-btns {
   width: 2px;
   height: 100%;
   background: #ccc;
-  z-index: 1;
 }
 
 #experience .timeline-item {
@@ -441,7 +439,6 @@ header .hero .hero-btns {
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
-  gap: 2rem;
 }
 
 #experience .timeline-item .timeline-icon {
@@ -468,7 +465,7 @@ header .hero .hero-btns {
 
 #experience .timeline-item .timeline-content,
 #experience .timeline-item .timeline-date {
-  width: calc(50% - 2rem);
+  width: 45%;
   background: #f5f5f5;
   padding: 1rem;
   border-radius: 4px;
@@ -517,16 +514,6 @@ header .hero .hero-btns {
   display: inline-block;
   max-width: 40%;
   padding: 0.5rem 1rem;
-  margin-top: 50px;
-  position: relative;
-  z-index: 3;
-  background: #f5f5f5;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-#experience .timeline-item .timeline-icon {
-  z-index: 4;
 }
 
 #experience .timeline-item:nth-child(odd) .timeline-date {
@@ -939,20 +926,6 @@ header .hero .hero-btns {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  #experience .timeline-item .timeline-content,
-  #experience .timeline-item .timeline-date {
-    width: calc(50% - 3rem);
-  }
-}
-
-@media screen and (max-width: 992px) {
-  #experience .timeline-item .timeline-content,
-  #experience .timeline-item .timeline-date {
-    width: calc(50% - 4rem);
-  }
-}
-
 @media screen and (max-width: 768px) {
   .hero {
     width: 100%;
@@ -986,11 +959,14 @@ header .hero .hero-btns {
     transform: translateY(0);
   }
   
-  #experience .timeline-item .timeline-date {
-    margin-top: 0.5rem;
-    max-width: 100%;
-    width: 100%;
+  #experience .timeline-item .timeline-date,
+  #experience .timeline-item .timeline-content {
+    position: relative;
+    width: auto;
     display: block;
+    margin: 0.5rem 0;
+    text-align: left;
+    padding: 0.75rem 1rem;
   }
   
   #experience .timeline-item:nth-child(odd) .timeline-content,
