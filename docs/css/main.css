@@ -1,7 +1,7 @@
+/* Base styles */
 html, body {
   overflow-x: hidden;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -19,6 +19,7 @@ body {
   line-height: 1.5;
   background: #181a1b;
 }
+
 body .noscroll {
   overflow-x: hidden;
 }
@@ -28,6 +29,7 @@ a {
   color: white;
 }
 
+/* Utility Classes */
 .main-font {
   font-family: "Nunito", sans-serif;
 }
@@ -56,6 +58,7 @@ a {
   transition: all 0.3s ease;
 }
 
+/* Text Colors */
 .text-blue {
   color: #3b82f6;
 }
@@ -72,6 +75,7 @@ a {
   color: #2e3031;
 }
 
+/* Background Colors */
 .bg-blue {
   background-color: #3b82f6;
 }
@@ -84,6 +88,7 @@ a {
   background-color: white;
 }
 
+/* Button Styles */
 .btn-blue-outline, .btn-dark, .btn-blue, .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -98,28 +103,34 @@ a {
   background-color: #3b82f6;
   border: 2px solid #3b82f6;
 }
+
 .btn-dark {
   color: white;
   background-color: #181a1b;
 }
+
 .btn-blue-outline {
   color: #3b82f6;
   background-color: transparent;
   border: 2px solid #3b82f6;
 }
+
 .btn-blue:hover {
   transition: all 0.3s ease;
   background: #0b63f3;
   border: 2px solid #0b63f3;
 }
+
 .btn-blue-outline:hover {
   color: white;
   background-color: #3b82f6;
 }
+
 .btn-small {
   padding: 0.5rem 1rem;
 }
 
+/* Back to Top Button */
 #backToTopBtn {
   position: fixed;
   right: 20px;
@@ -129,198 +140,17 @@ a {
   visibility: hidden;
   z-index: 1000;
 }
+
 #backToTopBtn.show {
   opacity: 1;
   visibility: visible;
 }
 
+/* Section Styles */
 .section-subtext {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 3rem;
-}
-
-.btn-email {
-  --primary: #3b82f6;
-  --primary-dark: #0455d8;
-  --primary-darkest: #013281;
-  --shadow: rgba(0, 0, 0, 0.3);
-  --text: #fff;
-  --text-opacity: 1;
-  --success: #3b82f6;
-  --success-x: -12;
-  --success-stroke: 14;
-  --success-opacity: 0;
-  --border-radius: 3;
-  --overflow: hidden;
-  --x: 0;
-  --y: 0;
-  --rotate: 0;
-  --plane-x: 0;
-  --plane-y: 0;
-  --plane-opacity: 1;
-  --trails: rgba(59, 130, 246, 0.15);
-  --trails-stroke: 57;
-  --left-wing-background: var(--primary);
-  --left-wing-first-x: 0;
-  --left-wing-first-y: 0;
-  --left-wing-second-x: 50;
-  --left-wing-second-y: 0;
-  --left-wing-third-x: 0;
-  --left-wing-third-y: 100;
-  --left-body-background: var(--primary);
-  --left-body-first-x: 51;
-  --left-body-first-y: 0;
-  --left-body-second-x: 51;
-  --left-body-second-y: 100;
-  --left-body-third-x: 0;
-  --left-body-third-y: 100;
-  --right-wing-background: var(--primary);
-  --right-wing-first-x: 49;
-  --right-wing-first-y: 0;
-  --right-wing-second-x: 100;
-  --right-wing-second-y: 0;
-  --right-wing-third-x: 100;
-  --right-wing-third-y: 100;
-  --right-body-background: var(--primary);
-  --right-body-first-x: 49;
-  --right-body-first-y: 0;
-  --right-body-second-x: 49;
-  --right-body-second-y: 100;
-  --right-body-third-x: 100;
-  --right-body-third-y: 100;
-  display: block;
-  cursor: pointer;
-  position: relative;
-  border: 0;
-  padding: 8px 0;
-  min-width: 100px;
-  text-align: center;
-  margin: 0;
-  line-height: 24px;
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 14px;
-  background: none;
-  outline: none;
-  color: var(--text);
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: transparent;
-}
-.btn-email .plane,
-.btn-email .trails {
-  pointer-events: none;
-  position: absolute;
-}
-.btn-email .plane {
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  filter: drop-shadow(0 3px 6px var(--shadow));
-  transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px)) rotate(calc(var(--rotate) * 1deg)) translateZ(0);
-}
-.btn-email .plane .left,
-.btn-email .plane .right {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  opacity: var(--plane-opacity);
-  transform: translate(calc(var(--plane-x) * 1px), calc(var(--plane-y) * 1px)) translateZ(0);
-}
-.btn-email .plane .left:before, .btn-email .plane .left:after,
-.btn-email .plane .right:before,
-.btn-email .plane .right:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: calc(var(--border-radius) * 1px);
-  transform: translate(var(--part-x, 0.4%), var(--part-y, 0)) translateZ(0);
-  z-index: var(--z-index, 2);
-  background: var(--background, var(--left-wing-background));
-  clip-path: polygon(calc(var(--first-x, var(--left-wing-first-x)) * 1%) calc(var(--first-y, var(--left-wing-first-y)) * 1%), calc(var(--second-x, var(--left-wing-second-x)) * 1%) calc(var(--second-y, var(--left-wing-second-y)) * 1%), calc(var(--third-x, var(--left-wing-third-x)) * 1%) calc(var(--third-y, var(--left-wing-third-y)) * 1%));
-}
-.btn-email .plane .left:after {
-  --part-x: -1%;
-  --z-index: 1;
-  --background: var(--left-body-background);
-  --first-x: var(--left-body-first-x);
-  --first-y: var(--left-body-first-y);
-  --second-x: var(--left-body-second-x);
-  --second-y: var(--left-body-second-y);
-  --third-x: var(--left-body-third-x);
-  --third-y: var(--left-body-third-y);
-}
-.btn-email .plane .right:before {
-  --part-x: -1%;
-  --z-index: 2;
-  --background: var(--right-wing-background);
-  --first-x: var(--right-wing-first-x);
-  --first-y: var(--right-wing-first-y);
-  --second-x: var(--right-wing-second-x);
-  --second-y: var(--right-wing-second-y);
-  --third-x: var(--right-wing-third-x);
-  --third-y: var(--right-wing-third-y);
-}
-.btn-email .plane .right:after {
-  --part-x: 0;
-  --z-index: 1;
-  --background: var(--right-body-background);
-  --first-x: var(--right-body-first-x);
-  --first-y: var(--right-body-first-y);
-  --second-x: var(--right-body-second-x);
-  --second-y: var(--right-body-second-y);
-  --third-x: var(--right-body-third-x);
-  --third-y: var(--right-body-third-y);
-}
-.btn-email .trails {
-  display: block;
-  width: 33px;
-  height: 64px;
-  top: -4px;
-  left: 16px;
-  fill: none;
-  stroke: var(--trails);
-  stroke-linecap: round;
-  stroke-width: 2;
-  stroke-dasharray: 57px;
-  stroke-dashoffset: calc(var(--trails-stroke) * 1px);
-  transform: rotate(68deg) translateZ(0);
-}
-.btn-email span {
-  display: block;
-  position: relative;
-  z-index: 4;
-  opacity: var(--text-opacity);
-}
-.btn-email span.success {
-  z-index: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 8px;
-  transform: translateX(calc(var(--success-x) * 1px)) translateZ(0);
-  opacity: var(--success-opacity);
-  color: var(--success);
-}
-.btn-email span.success svg {
-  display: inline-block;
-  vertical-align: top;
-  width: 16px;
-  height: 16px;
-  margin: 4px 8px 0 0;
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 14px;
-  stroke: var(--success);
-  stroke-dashoffset: calc(var(--success-stroke) * 1px);
 }
 
 .blue-link-underline {
@@ -336,28 +166,63 @@ a {
   filter: brightness(0) invert(1);
 }
 
-@media screen and (max-width: 999px) {
-  .hide-for-mobile {
-    display: none !important;
-  }
+/* Navigation */
+#nav {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: inline-block;
+  width: auto;
+  padding: 0;
 }
 
-@media screen and (min-width: 1000px) {
-  .hide-for-desktop {
-    display: none;
-  }
+#nav > .container.nav-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  background: #f0f0f0;
+  border-radius: 1rem;
+  margin: 0 auto;
 }
 
+#nav .nav-links,
+#nav .mobile-menu-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav .nav-links a,
+#nav .mobile-menu-links a {
+  font-size: 0.875rem;
+  padding: 0.2rem 0.4rem;
+  color: #000;
+  white-space: nowrap;
+}
+
+#nav .nav-links a.active,
+#nav .mobile-menu-links a.active {
+  background: #ddd;
+  color: #000;
+  border-radius: 0.5rem;
+}
+
+/* Header Styles */
 header {
   background: #181a1b;
   background-size: cover;
   min-height: 80vh;
   position: relative;
 }
+
 header #particles-js {
   height: 80vh;
   position: relative;
 }
+
 header #particles-js canvas {
   position: absolute;
   top: 0;
@@ -366,24 +231,30 @@ header #particles-js canvas {
   width: 100%;
   height: 100%;
 }
+
 header nav {
   width: 100%;
 }
+
 header nav .nav-container {
   position: relative;
   display: flex;
   justify-content: space-between;
 }
+
 header nav .nav-container #logo {
   margin: auto 0;
   z-index: 10;
 }
+
 header nav .nav-container #logo img {
   width: 250px;
 }
+
 header nav .nav-container .nav-links {
   z-index: 1000;
 }
+
 header nav .nav-container .nav-links li {
   list-style: none;
   display: flex;
@@ -391,56 +262,39 @@ header nav .nav-container .nav-links li {
   align-items: center;
   margin-left: 2rem;
 }
+
 header nav .nav-container .nav-links a {
   text-decoration: none;
   letter-spacing: 2px;
   color: white;
 }
-/*
-header nav .nav-container .nav-links .link::after {
-  content: "";
+
+/* Logo Styles */
+.logo-wrapper {
   position: relative;
+  display: inline-block;
+}
+
+#header-logo {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 4px solid #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+}
+
+.wave-emoji {
+  position: absolute;
+  bottom: -2px;
+  right: -8px;
+  font-size: 2rem !important;
+  line-height: 1;
   display: block;
-  width: 0%;
-  height: 2px;
-  top: 3px;
-  margin: auto;
-  background: #3b82f6;
-  transition: width 0.3s ease;
+  text-shadow: 0 0 2px rgba(0,0,0,0.6);
 }
-header nav .nav-container .nav-links .link:hover::after {
-  width: 100%;
-}
-  */
-header nav .mobile-menu {
-  position: relative;
-  z-index: 1000;
-}
-header nav .mobile-menu .container {
-  padding-top: 0;
-}
-header nav .mobile-menu .container .mobile-menu-links ul {
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-}
-header nav .mobile-menu .container .mobile-menu-links ul li {
-  margin: 0rem 1rem;
-}
-header nav .mobile-menu .container .mobile-menu-links ul .link::after {
-  content: "";
-  position: relative;
-  display: block;
-  width: 0;
-  height: 2px;
-  top: 3px;
-  margin: auto;
-  background: #3b82f6;
-  transition: width 0.3s ease;
-}
-header nav .mobile-menu .container .mobile-menu-links ul .link:hover::after {
-  width: 100%;
-}
+
+/* Hero Section */
 header .hero {
   z-index: 5;
   position: absolute;
@@ -448,10 +302,12 @@ header .hero {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 header .hero h1,
 header .hero p {
   color: white;
 }
+
 header .hero h1,
 header .hero h2 span {
   letter-spacing: 2px;
@@ -460,6 +316,7 @@ header .hero h2 span {
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: bold;
 }
+
 header .hero p {
   color: #dcdcdc;
   line-height: 1.6;
@@ -469,722 +326,34 @@ header .hero p {
   margin: 0 auto;
   padding: 0.5rem;
 }
+
 header .hero p .blue-link-underline {
   color: #3783ff;
 }
+
 header .hero .hero-btns {
   white-space: nowrap;
   text-align: center;
   margin-top: 1rem;
 }
-header .socials {
-  position: absolute;
-  bottom: 40%;
-  left: -125px;
-  z-index: 10;
-}
-header .socials ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-header .socials ul li {
-  transition: 0.3s;
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  font-size: 1.5rem;
-  width: 100%;
-  height: 100%;
-}
-header .socials ul li a {
-  text-align: right;
-  height: 100%;
-  width: 100%;
-  padding: 15px 20px;
-}
-header .socials ul li a i {
-  font-size: 1.75rem;
-  margin-left: 1.5rem;
-}
-header .socials ul li:hover {
-  transform: translateX(115px);
-}
-header .scroll-btn-container {
-  position: absolute;
-  width: 100%;
-  background: red;
-  bottom: 150px;
-}
-header .scroll-btn-container div {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-header .scroll-btn-container div a {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-header .scroll-btn-container div a span {
-  display: block;
-  height: 20px;
-  width: 20px;
-  border-bottom: 2px solid #3b82f6;
-  border-right: 2px solid #3b82f6;
-  transform: rotate(45deg);
-  margin: -20px 0;
-  animation: animate 2s infinite;
-}
-header .scroll-btn-container div a span:nth-child(2) {
-  animation-delay: -0.2s;
-}
-header .scroll-btn-container div a span:nth-child(3) {
-  animation-delay: -0.4s;
-}
-@keyframes animate {
-  0% {
-    opacity: 0;
-    transform: rotate(45deg) translate(-20px, -20px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(45deg) translate(20px, 20px);
-  }
-}
-header .seperator-skew {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 150px;
-  width: 100%;
-  overflow: hidden;
-}
-header .seperator-skew svg {
-  position: absolute;
-  bottom: 0;
-}
-header .seperator-skew svg .fill-white {
-  fill: white;
-}
 
-@media screen and (max-width: 999px) {
-  header nav .container {
-    padding-bottom: 0.75rem;
-  }
-  header nav .nav-container {
-    justify-content: center;
-  }
-  header .hero {
-    top: 55%;
-  }
-  header .socials {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hero {
-    width: 90%;
-  }
-  header nav .nav-container #logo img {
-    width: 200px;
-  }
-}
-@media screen and (max-width: 500px) {
-  header nav .nav-container #logo {
-    font-size: 1.5rem;
-  }
-  header nav .mobile-menu .container .mobile-menu-links ul li {
-    margin: 0 0.5rem;
-  }
-  header .hero span {
-    max-width: 100%;
-  }
-  header .hero p {
-    width: 100%;
-  }
-}
-@media screen and (min-height: 900px) {
-  header {
-    min-height: 70vh;
-  }
-  header #particles-js {
-    height: 70vh;
-  }
-}
+/* Projects Section */
 .projects {
   background: white;
   padding: 3rem 0;
 }
-.projects h2,
-.projects h2 span {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-weight: bold;
-}
-.projects .project-row {
-  display: flex;
-  margin-bottom: 3rem;
-}
-.projects .project-row .project-left {
-  width: 50%;
-  margin-right: 2rem;
-}
-.projects .project-row .project-left img {
-  width: 100%;
-  border: 1px solid lightgray;
-}
-.projects .project-row .project-right {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.projects .project-row .project-right h3 {
-  font-size: 1.25rem;
-}
-.projects .project-row .project-right .tech-stack-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  margin-top: 1rem;
-}
-.projects .project-row .project-right .tech-stack-list p {
-  margin-right: 1rem;
-}
-.projects .project-row .project-right .tech-stack-list li {
-  margin-right: 20px;
-  font-size: 1.5rem;
-}
-.projects .project-row .project-right .project-links {
-  margin-top: 1rem;
-}
-.projects .project-row #webscraper {
-  background-image: url("../img/top10songs.JPG");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  -webkit-transition: background-image 0.2s ease-in-out;
-  transition: background-image 0.2s ease-in-out;
-}
-.projects .project-row #webscraper:hover {
-  background-image: url("../img/top10songs.gif");
-}
 
-@media screen and (max-width: 860px) {
-  .projects .project-row {
-    display: flex;
-    margin-bottom: 3rem;
-    flex-direction: column;
-  }
-  .projects .project-row .project-left {
-    width: 100%;
-  }
-  .projects .project-row .project-right {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .project-left {
-    min-height: 200px;
-  }
-}
-@media screen and (min-width: 501px) and (max-width: 700px) {
-  .project-left {
-    min-height: 300px;
-  }
-}
-@media screen and (min-width: 701px) and (max-width: 859px) {
-  .project-left {
-    min-height: 350px;
-  }
-}
-.education {
-  background: white;
-  padding-bottom: 3rem;
-}
-.education .container {
-  max-width: 900px;
-}
-.education .container h2 {
-  text-align: center;
-  color: black;
-  margin-bottom: 3rem;
-}
-.education .container .education-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
-  padding: 40px;
-  border-radius: 3px;
-}
-.education .container .education-card > *:last-child {
-  margin-top: 40px;
-}
-@media (max-width: 500px) {
-  .education .container .education-card {
-    padding: 20px;
-  }
-}
-.education .container .education-card .education-card-column {
-  display: flex;
-}
-.education .container .education-card .education-card-column .card-column-image {
-  flex: 0 0 20%;
-}
-.education .container .education-card .education-card-column .card-column-image img {
-  width: 100%;
-}
-.education .container .education-card .education-card-column .card-column-large {
-  flex: 0 0 80%;
-  padding-left: 1.5rem;
-}
-.education .container .education-card .education-card-column .card-column-large > * {
-  margin: 0.25rem 0;
-}
-.education .container .education-card .education-card-column .card-column-large h4 {
-  font-weight: normal;
-}
-.education .container .education-card .education-card-column .card-column-large ul {
-  padding-left: 1.5rem;
-}
-.education .container .education-card .education-card-column .card-column-large hr {
-  border: 0;
-  border-top: 1px solid #eee;
-  margin-top: 40px;
-}
-
-.skills {
-  padding: 3rem 0;
-  position: relative;
-  overflow: hidden;
-}
-.skills canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-}
-.skills h2,
-.skills h2 span {
-  text-align: center;
-  margin-bottom: 3rem;
-  font-weight: bold;
-}
-.skills .container {
-  padding: 6rem 0;
-}
-.skills .skills-icons {
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 10;
-}
-.skills .skills-icons svg {
-  margin: 0.5rem;
-  width: 90px;
-}
-@media (max-width: 420px) {
-  .skills .skills-icons svg {
-    width: 70px;
-  }
-}
-.skills .skills-icons li {
-  transition: 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 1rem;
-  margin: 1rem;
-}
-@media (max-width: 420px) {
-  .skills .skills-icons li {
-    margin: 1rem 0.75rem;
-  }
-}
-.skills .skills-icons li .aws-logo {
-  background: white;
-  padding: 10px;
-  border-radius: 3px;
-}
-.skills .skills-icons li:hover {
-  transform: scale(1.3);
-}
-.skills .seperator-skew-top {
-  position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
-  height: 150px;
-  width: 120%;
-  overflow: hidden;
-}
-.skills .seperator-skew-top svg {
-  position: absolute;
-  top: 0;
-  transform: scaleY(-1) scaleX(-1);
-}
-.skills .seperator-skew-top svg .fill-white {
-  fill: white;
-}
-.skills .seperator-skew-bottom {
-  position: absolute;
-  bottom: -0.5px;
-  left: 0;
-  right: 0;
-  height: 150px;
-  width: 120%;
-  overflow: hidden;
-}
-.skills .seperator-skew-bottom svg {
-  position: absolute;
-  bottom: 0;
-}
-.skills .seperator-skew-bottom svg .fill-white {
-  fill: white;
-}
-
-.contact {
-  background: white;
-  padding: 3rem 0;
-}
-.contact .section-title {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.contact .card-container {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 3rem;
-  flex-wrap: wrap;
-}
-.contact .card-container .card {
-  background: #fff;
-  width: 260px;
-  margin: 20px;
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
-  border-radius: 3px;
-}
-.contact .card-container .card i {
-  font-size: 3.5rem;
-  color: #3b82f6;
-  margin-bottom: 1rem;
-  transition: 0.4s;
-}
-.contact .card-container .card i:hover {
-  transform: translateY(-20%);
-}
-.contact .card-container .card > * {
-  margin: 0.5rem;
-}
-.contact form {
-  max-width: 600px;
-  margin: 0 auto;
-  border-radius: 3px;
-  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
-  padding: 2rem;
-}
-.contact form h2 {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-.contact form .form-group input {
-  margin: 0.75rem 0;
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid #afafaf;
-  padding: 0.75rem;
-  font-size: 1rem;
-}
-.contact form .form-group input:focus {
-  outline: none;
-}
-.contact form .form-group textarea {
-  width: 100%;
-  border-radius: 3px;
-  margin: 0.75rem 0;
-  border: 1px solid #afafaf;
-  padding: 0.75rem;
-  font-size: 1rem;
-  resize: vertical;
-}
-.contact form .form-group textarea:focus {
-  outline: none;
-}
-.contact form #status {
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-  border-radius: 3px;
-  color: #00b700;
-}
-.contact form #status.success {
-  color: #00b700;
-  animation: status 4s ease forwards;
-}
-.contact form #status.error {
-  color: red;
-  animation: status 4s ease forwards;
-}
-@keyframes status {
-  0% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  90% {
-    opacity: 1;
-    pointer-events: all;
-  }
-  100% {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-.footer {
-  background: #181a1b;
-  padding: 1.5rem 0;
-  color: white;
-}
-.footer canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-}
-.footer .footer-flex {
-  display: flex;
-  justify-content: space-between;
-}
-.footer .footer-flex #logo-footer {
-  width: 200px;
-}
-.footer .footer-flex .top-scroll-button {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  border: 3px solid white;
-  border-radius: 50%;
-  transition: 0.3s;
-}
-.footer .footer-flex .top-scroll-button:hover {
-  color: #3b82f6;
-  border: 3px solid #3b82f6;
-}
-.footer .footer-flex .footer-icon-links a {
-  margin-left: 2rem;
-  transition: 0.3s;
-}
-.footer .footer-flex .footer-icon-links a:hover {
-  color: #3b82f6;
-}
-.footer .footer-flex .footer-icon-links a i {
-  transition: 0.3s;
-}
-.footer .footer-flex .footer-icon-links a i:hover {
-  transform: translateY(-20%);
-}
-
-@media screen and (max-width: 500px) {
-  .footer .footer-flex {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer .footer-flex .top-scroll-button {
-    margin-top: 2rem;
-  }
-  .footer .footer-flex .footer-icon-links {
-    margin-top: 2rem;
-  }
-  .footer .footer-flex .footer-icon-links a {
-    margin: 0 1rem;
-  }
-}/*# sourceMappingURL=main.css.map */
-
-
-/* ------------ Experience Section Styles ------------ */
-#experience {
-  background: #fff;
-  color: #333;
-  padding: 3rem 0;
-  position: relative;  /* resets any inherited absolute/overflow */
-  z-index: 1;          /* ensure it sits above any canvas */
-}
-
-#experience h2,
-#experience h3,
-#experience h4 {
-  color: #111;
-}
-
-#experience .experience-item {
-  margin-bottom: 2rem;
-}
-#experience .experience-item ul {
-  list-style: disc inside;
-  margin: 0.5rem 0 1.5rem;
-  padding-left: 1.5rem;
-}
-
-/* ------------ Skills Section Override ------------ */
-#skills {
-  background: #fff !important;      /* white background */
-  color: #333 !important;           /* dark text */
-  position: relative;               /* establish new stacking context */
-  z-index: 1;                       /* sit above the hidden canvas */
-  overflow: visible;                /* ensure no clipping */
-}
-
-/* Hide the particles canvas inside Skills */
-#skills canvas {
-  display: none !important;
-}
-
-/* If you have any skew separators that are coming in dark, hide them too */
-#skills .seperator-skew-top,
-#skills .seperator-skew-bottom {
-  display: none !important;
-}
-
-
-#skills .skills-icons li {
-  font-size: 2rem;
-  margin: 0.75rem;
-}
-#skills .skills-icons li span {
-  margin-top: 0.25rem;
-}
-
-/* ------------ Skills labels override ------------ */
-#skills .skills-icons,
-#skills .skills-icons li {
-  color: #333 !important;       /* make all icon+text dark */
-}
-
-#skills .skills-icons li span {
-  display: block;               /* label on its own line */
-  margin-top: 0.5rem;           /* a bit of breathing room */
-  font-size: 0.9rem;            /* same or your preferred size */
-  color: #333 !important;       /* ensure it’s visible */
-}
-
-
-/* Logo wrapper in the nav */
-.logo-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-#header-logo {
-  width: 100px !important;            /* increase the diameter */
-  height: 100px !important;           /* keep it square for a circle */
-  border-radius: 50% !important;      /* perfect circle */
-  object-fit: cover !important;       /* fill-and-crop inside */
-  border: 4px solid #fff !important;  /* crisp white ring */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3)!important; /* optional lift */
-}
-
-/* Waving emoji at bottom-right of the logo */
-.wave-emoji {
-  position: absolute;
-  bottom: -2px;                /* pull it down a bit more */
-  right: -8px;                 /* pull it out to the right */
-  font-size: 2rem !important;/* larger hand */
-  line-height: 1;
-  display: block;
-  text-shadow: 0 0 2px rgba(0,0,0,0.6);
-}
-
-
-#logo-footer {
-  width: 60px;
-  height: 70px;
-  object-fit: cover;
-  border: 2px solid #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* hover: scale up & slight rotate + shadow */
-#logo-footer:hover {
-  transform: scale(1.2) rotate(-5deg);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* click: spin once */
-#logo-footer:active {
-  animation: spin-on-click 0.6s ease;
-}
-@keyframes spin-on-click {
-  from {
-    transform: scale(1.2) rotate(-5deg);
-  }
-  to {
-    transform: scale(1) rotate(360deg);
-  }
-}
-
-/* Fit Journey circle override */
-.projects .project-row {
-  display: flex;
-  align-items: center;
-}
-
-.projects .project-row .project-left img {
-  width: 300px !important;
-  height: 300px !important;
-  object-fit: cover !important;
-  border: 0px solid #000 !important;
-  border-radius: 50% !important;            /* <-- makes it circular */
-  display: block !important;
-  margin: 0 auto !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-}
-
-.projects .project-row .project-left img:hover {
-  transform: translateY(-8px) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
-}
-
-
-
-/* Projects grid & cards */
-.projects {
-  background: #fff;
-  padding: 3rem 0;
-}
 .projects h2 {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 .project-grid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;        /* vertical spacing between cards */
+  gap: 2rem;
 }
+
 .project-card {
   background: #f4f4f4;
   padding: 1.5rem;
@@ -1192,47 +361,54 @@ header .seperator-skew svg .fill-white {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+
 .project-card h3 {
   margin-bottom: 0.5rem;
 }
+
 .project-card .text-grey em {
   font-size: 0.9rem;
 }
+
 .project-card .made-with {
   margin: 1rem 0 0.5rem;
   font-weight: bold;
 }
+
 .project-card .tech-stack-list {
   display: flex;
   list-style: none;
   padding: 0;
   margin-bottom: 1rem;
 }
+
 .project-card .tech-stack-list li {
   font-size: 1.5rem;
   margin-right: 0.75rem;
 }
+
 .project-card .project-features {
   list-style: disc inside;
   margin-bottom: 1rem;
   padding-left: 1.2rem;
 }
+
 .project-card .project-links {
   margin-top: 0.5rem;
 }
+
 .project-card .project-links a {
   margin-right: 0.5rem;
 }
 
-
-/* ------ Vertical Timeline Styles ------ */
+/* Experience Section */
 #experience {
   background: white;
-  /* keep the top padding, shrink the bottom so Skills comes up closer */
   padding: 3rem 0 0rem;
 }
 
@@ -1241,11 +417,11 @@ header .seperator-skew svg .fill-white {
   margin-bottom: 2rem;
 }
 
-/* container for all items + center line */
 #experience .timeline {
   position: relative;
   margin: 2rem 0;
 }
+
 #experience .timeline::before {
   content: "";
   position: absolute;
@@ -1257,16 +433,14 @@ header .seperator-skew svg .fill-white {
   background: #ccc;
 }
 
-/* each item */
 #experience .timeline-item {
-  margin: 4rem 0;    /* increase space between items */
+  margin: 4rem 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
 }
 
-/* the icon centered on the line */
 #experience .timeline-item .timeline-icon {
   position: absolute;
   left: 50%;
@@ -1284,11 +458,11 @@ header .seperator-skew svg .fill-white {
   z-index: 2;
   transition: transform 0.3s;
 }
+
 #experience .timeline-item .timeline-icon:hover {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-/* content and date boxes */
 #experience .timeline-item .timeline-content,
 #experience .timeline-item .timeline-date {
   width: 45%;
@@ -1298,36 +472,36 @@ header .seperator-skew svg .fill-white {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s;
 }
+
 #experience .timeline-item .timeline-content:hover,
 #experience .timeline-item .timeline-date:hover {
   transform: translateY(-5px);
 }
 
-/* alternate sides: odd = content left, date right */
 #experience .timeline-item:nth-child(odd) .timeline-content {
   order: 1;
   text-align: left;
 }
+
 #experience .timeline-item:nth-child(odd) .timeline-date {
   order: 3;
   text-align: right;
 }
-/* even = date left, content right */
+
 #experience .timeline-item:nth-child(even) .timeline-date {
   order: 1;
   text-align: left;
 }
-/* even = date left, content right */
+
 #experience .timeline-item:nth-child(even) .timeline-content {
   order: 3;
-  text-align: right;   /* ← remove or comment this */
 }
 
-/* headings inside content */
 #experience .timeline-content h4 {
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
+
 #experience .timeline-content h4 small {
   display: block;
   font-weight: normal;
@@ -1335,38 +509,21 @@ header .seperator-skew svg .fill-white {
   margin-top: 0.25rem;
 }
 
-/* make the date box shrink to its text */
 #experience .timeline-item .timeline-date {
-  width: auto;                 /* no more fixed 45% */
-  display: inline-block;       /* shrink‐wrap its contents */
-  max-width: 40%;              /* optional cap if you have very long dates */
-  padding: 0.5rem 1rem;        /* you can tweak padding */
+  width: auto;
+  display: inline-block;
+  max-width: 40%;
+  padding: 0.5rem 1rem;
 }
 
-/* ensure the line‐up in flex still works */
-#experience .timeline-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-/* make the date box auto-size to its contents */
-#experience .timeline-item .timeline-date {
-  width: auto;            /* don’t force 45% any more */
-  display: inline-block;  /* shrink-wrap around the text */
-}
-
-/* for odd items (date on right), push it left to ~50% of container */
 #experience .timeline-item:nth-child(odd) .timeline-date {
   margin-right: 30%;
 }
 
-/* for even items (date on left), push it right to ~50% */
 #experience .timeline-item:nth-child(even) .timeline-date {
   margin-left: 30%;
 }
 
-/* Always left-align the text inside our timeline content */
 #experience .timeline-content {
   text-align: left !important;
 }
@@ -1376,172 +533,388 @@ header .seperator-skew svg .fill-white {
   padding-left: 1rem;
 }
 
-/* ─── Bigger Section Titles ─── */
-section h2.main-font,
-.contact .section-title,
-#experience h2 {
-  font-size: 2.5rem;    /* or choose a size you like */
-  line-height: 1.2;
-  margin-bottom: .5rem; /* tighten up if needed */
+/* Skills Section */
+.skills {
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+  background: #fff !important;
+  color: #333 !important;
 }
 
-/* ─── Larger Skills Icons & Labels ─── */
+.skills canvas {
+  display: none !important;
+}
+
+.skills .seperator-skew-top,
+.skills .seperator-skew-bottom {
+  display: none !important;
+}
+
+.skills h2.main-font {
+  margin: 0 auto 1.5rem;
+  text-align: center;
+  position: relative;
+  left: -90px;
+}
+
+.skills .skills-icons {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
 .skills .skills-icons svg {
   width: 105px;
   height: 105px;
+  margin: 0.5rem;
 }
 
 .skills .skills-icons li {
-  margin: 1.5rem;        /* give them a bit more breathing room */
-  font-size: 2rem;     /* bump up the label size */
+  margin: 1.5rem;
+  font-size: 2rem;
+  color: #333 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .skills .skills-icons li span {
   margin-top: 0.75rem;
-  font-size: 2rem;       /* or 1.1rem if you want them even bigger */
+  font-size: 2rem;
+  color: #333 !important;
 }
 
-
-/* ─── Align “Skills” Title with the Rest ─── */
-.skills .container {
-  padding: 3rem 0;            /* same vertical padding as Projects, Education, etc */
+.skills .skills-icons li span.iconify {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.2s ease;
 }
 
-.skills h2.main-font {
-  margin: 0 auto 1.5rem;      /* reset any extra top margin, match other sections’ bottom margin */
-  text-align: center;         /* keep it centered like the rest */
+.skills .skills-icons li:hover span.iconify {
+  transform: scale(1.2);
 }
 
-/* ─── Shift “Skills” Title Slightly Left ─── */
-#skills h2.main-font {
-  position: relative;
-  left: -90px; /* move left by 20px—tweak as needed */
+/* Education Section */
+.education {
+  background: white;
+  padding-bottom: 3rem;
 }
 
-.education-card .card-column-image img {
+.education .container {
+  max-width: 900px;
+}
+
+.education .container h2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 3rem;
+}
+
+.education .container .education-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
+  padding: 40px;
+  border-radius: 3px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.education-card .card-column-image img:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.education-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.education-card:hover {
+.education .container .education-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
-/* =============== FIXED, TIGHT “PILL” NAV =============== */
-/* 1) Peel the <nav> off of the header so it never scrolls away */
-#nav {
-  position: fixed;          /* lock it to the viewport */
-  top: 1rem;                /* 1rem down from the top edge */
-  left: 50%;                /* center it horizontally */
-  transform: translateX(-50%);
-  z-index: 1000;            /* sit above everything else */
-  display: inline-block;    /* shrink wrap to its contents */
-  width: auto;              /* don’t ever stretch full-width */
-  padding: 0;               /* no extra padding on the nav itself */
+.education .container .education-card > *:last-child {
+  margin-top: 40px;
 }
 
-/* 2) Turn the inner container into your grey, rounded pill */
-#nav > .container.nav-container {
-  display: inline-flex;     /* hug contents tightly */
+.education .container .education-card .education-card-column {
+  display: flex;
+}
+
+.education .container .education-card .education-card-column .card-column-image {
+  flex: 0 0 20%;
+}
+
+.education .container .education-card .education-card-column .card-column-image img {
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education .container .education-card .education-card-column .card-column-image img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.education .container .education-card .education-card-column .card-column-large {
+  flex: 0 0 80%;
+  padding-left: 1.5rem;
+}
+
+.education .container .education-card .education-card-column .card-column-large > * {
+  margin: 0.25rem 0;
+}
+
+.education .container .education-card .education-card-column .card-column-large h4 {
+  font-weight: normal;
+}
+
+.education .container .education-card .education-card-column .card-column-large ul {
+  padding-left: 1.5rem;
+}
+
+.education .container .education-card .education-card-column .card-column-large hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+}
+
+/* Contact Section */
+.contact {
+  background: white;
+  padding: 3rem 0;
+}
+
+.contact .section-title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact .card-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.contact .card-container .card {
+  background: #fff;
+  width: 260px;
+  margin: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;              /* a little breathing room between links */
-  padding: 0.25rem 0.75rem;  /* pill height/width */
-  background: #f0f0f0;       /* light grey background */
-  border-radius: 1rem;      /* fully rounded ends */
-  margin: 0 auto;           /* center if anything changes */
-}
-/* 3) Keep each link itself super snug */
-#nav .nav-links li a,
-#nav .mobile-menu-links li a {
-  padding: 0.25rem 0.5rem;   /* tiny hit-area around each word */
-  color: #000;              /* black text */
-  white-space: nowrap;      /* don’t wrap onto two lines */
+  flex-direction: column;
+  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
+  border-radius: 3px;
 }
 
-
-
-
-
-
-
-
-
-/* 2) Tighter container padding & smaller text */
-#nav > .container.nav-container {
-  padding: 0.2rem 0.5rem;    /* less “breathing room” */
-  gap: 0.5rem;               /* smaller gap between items */
-}
-#nav .nav-links a,
-#nav .mobile-menu-links a {
-  font-size: 0.875rem;       /* smaller link text */
-  padding: 0.2rem 0.4rem;    /* less padding around each link */
+.contact .card-container .card i {
+  font-size: 3.5rem;
+  color: #3b82f6;
+  margin-bottom: 1rem;
+  transition: 0.4s;
 }
 
-/* 3) Hide all <i> icons in the nav */
-#nav .nav-links i,
-#nav .mobile-menu-links i {
-  display: none !important;
+.contact .card-container .card i:hover {
+  transform: translateY(-20%);
 }
 
-/* kill the bullets & indentation on both desktop + mobile nav lists */
-#nav .nav-links,
-#nav .mobile-menu-links {
-  list-style: none;    /* no bullets */
-  margin: 0;           /* remove default outer spacing */
-  padding: 0;          /* remove default left‐indent */
+.contact .card-container .card > * {
+  margin: 0.5rem;
 }
 
-
-/* how the current-section link looks */
-#nav .nav-links a.active,
-#nav .mobile-menu-links a.active {
-  background: #ddd;     /* light grey pill */
-  color: #000;          /* black text */
-  border-radius: 0.5rem;
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
+  padding: 2rem;
 }
 
-/* make sure there’s no hover effect */
-#nav .nav-links a:hover,
-#nav .mobile-menu-links a:hover {
-  background: none;
-  text-decoration: none;
+.contact form h2 {
+  text-align: center;
+  margin: 1.5rem 0;
 }
 
-/* ─── Base timeline styles (desktop) ─── */
-/* (you already have this) */
+.contact form .form-group input,
+.contact form .form-group textarea {
+  width: 100%;
+  border-radius: 3px;
+  margin: 0.75rem 0;
+  border: 1px solid #afafaf;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
 
-/* ─── Responsive override ─── */
-@media (max-width: 768px) {
-  /* 1) Make the vertical line hug the left edge */
+.contact form .form-group input:focus,
+.contact form .form-group textarea:focus {
+  outline: none;
+}
+
+.contact form .form-group textarea {
+  resize: vertical;
+}
+
+.contact form #status {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 3px;
+  color: #00b700;
+}
+
+.contact form #status.success {
+  color: #00b700;
+  animation: status 4s ease forwards;
+}
+
+.contact form #status.error {
+  color: red;
+  animation: status 4s ease forwards;
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Footer */
+.footer {
+  background: #181a1b;
+  padding: 1.5rem 0;
+  color: white;
+}
+
+.footer .footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .footer-flex #logo-footer {
+  width: 60px;
+  height: 70px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer .footer-flex #logo-footer:hover {
+  transform: scale(1.2) rotate(-5deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.footer .footer-flex #logo-footer:active {
+  animation: spin-on-click 0.6s ease;
+}
+
+@keyframes spin-on-click {
+  from {
+    transform: scale(1.2) rotate(-5deg);
+  }
+  to {
+    transform: scale(1) rotate(360deg);
+  }
+}
+
+.footer .footer-flex .top-scroll-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.footer .footer-flex .top-scroll-button:hover {
+  color: #3b82f6;
+  border: 3px solid #3b82f6;
+}
+
+.footer .footer-flex .footer-icon-links a {
+  margin-left: 2rem;
+  transition: 0.3s;
+}
+
+.footer .footer-flex .footer-icon-links a:hover {
+  color: #3b82f6;
+}
+
+.footer .footer-flex .footer-icon-links a i {
+  transition: 0.3s;
+}
+
+.footer .footer-flex .footer-icon-links a i:hover {
+  transform: translateY(-20%);
+}
+
+/* Media Queries */
+@media screen and (max-width: 999px) {
+  .hide-for-mobile {
+    display: none !important;
+  }
+  
+  header nav .container {
+    padding-bottom: 0.75rem;
+  }
+  
+  header nav .nav-container {
+    justify-content: center;
+  }
+  
+  header .hero {
+    top: 55%;
+  }
+  
+  header .socials {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    width: 90%;
+  }
+  
+  header nav .nav-container #logo img {
+    width: 200px;
+  }
+  
   #experience .timeline::before {
     left: 1rem;
   }
-
-  /* 2) Stack each item instead of side-by-side */
+  
   #experience .timeline-item {
     display: block;
     margin: 3rem 0;
-    padding-left: 2.5rem;  /* give space for the icon */
+    padding-left: 2.5rem;
   }
-
-  /* 3) Reposition the icon on the left of each block */
+  
   #experience .timeline-item .timeline-icon {
-    position: absolute;
     left: 0.5rem;
     top: 0;
     transform: translateY(0);
   }
-
-  /* 4) Make both date & content full-width, normal flow */
+  
   #experience .timeline-item .timeline-date,
   #experience .timeline-item .timeline-content {
     position: relative;
@@ -1551,10 +924,9 @@ section h2.main-font,
     text-align: left;
     padding: 0.75rem 1rem;
   }
-
-  /* 5) Turn off the odd/even ordering tricks */
-  #experience .timeline-item:nth-child(odd)  .timeline-content,
-  #experience .timeline-item:nth-child(odd)  .timeline-date,
+  
+  #experience .timeline-item:nth-child(odd) .timeline-content,
+  #experience .timeline-item:nth-child(odd) .timeline-date,
   #experience .timeline-item:nth-child(even) .timeline-content,
   #experience .timeline-item:nth-child(even) .timeline-date {
     order: unset !important;
@@ -1564,33 +936,6 @@ section h2.main-font,
   }
 }
 
-/* ensure the icon is an inline-block so transform works */
-.skills-icons li span.iconify {
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-/* scale the icon up on hover */
-.skills-icons li:hover span.iconify {
-  transform: scale(1.3);
-}
-
-
-/* make sure the Iconify SVGs can be scaled */
-.skills .skills-icons li span.iconify {
-  display: inline-block;
-  transform-origin: center center;
-  transition: transform 0.2s ease;
-}
-
-/* on hover, bump the icon up by 20% */
-.skills .skills-icons li:hover span.iconify {
-  transform: scale(1.2);
-}
-
-
-
-
 @media screen and (max-width: 600px) {
   header .hero h1,
   header .hero h2 span,
@@ -1598,18 +943,64 @@ section h2.main-font,
     white-space: normal !important;
     word-break: break-word;
   }
-
-  /* Optional: scale down the font a bit to fit better */
+  
   header .hero h1 {
     font-size: clamp(1.5rem, 6vw, 3rem);
   }
-}
-
-
-@media screen and (max-width: 600px) {
+  
   header nav .nav-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  
+  .footer .footer-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer .footer-flex .top-scroll-button {
+    margin-top: 2rem;
+  }
+  
+  .footer .footer-flex .footer-icon-links {
+    margin-top: 2rem;
+  }
+  
+  .footer .footer-flex .footer-icon-links a {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header nav .nav-container #logo {
+    font-size: 1.5rem;
+  }
+  
+  header nav .mobile-menu .container .mobile-menu-links ul li {
+    margin: 0 0.5rem;
+  }
+  
+  header .hero span {
+    max-width: 100%;
+  }
+  
+  header .hero p {
+    width: 100%;
+  }
+  
+  .education .container .education-card {
+    padding: 20px;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  header {
+    min-height: 70vh;
+  }
+  
+  header #particles-js {
+    height: 70vh;
   }
 }
