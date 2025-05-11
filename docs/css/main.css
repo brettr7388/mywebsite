@@ -573,7 +573,7 @@ header .hero .hero-btns {
   width: 65px;
   height: 65px;
   margin: 0.5rem;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .skills .skills-icons li {
@@ -584,20 +584,35 @@ header .hero .hero-btns {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .skills .skills-icons li span {
   margin-top: 0.5rem;
   font-size: 1.2rem;
   color: #333 !important;
+  transition: all 0.3s ease;
 }
 
 .skills .skills-icons li:hover {
   transform: scale(1.1);
 }
 
-.skills .skills-icons li:hover span.iconify {
+.skills .skills-icons li:hover svg {
+  transform: scale(1.1);
+}
+
+.skills .skills-icons li:hover span:not(.iconify) {
+  transform: scale(1.1);
+}
+
+.skills .skills-icons .iconify {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.skills .skills-icons li:hover .iconify {
   transform: scale(1.1);
 }
 
