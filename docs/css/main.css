@@ -1,6 +1,7 @@
 /* Base styles */
 html, body {
   overflow-x: hidden;
+  font-size: 18px;
 }
 
 html {
@@ -16,8 +17,9 @@ html {
 
 body {
   padding: 0;
-  line-height: 1.5;
+  line-height: 1.6;
   background: #181a1b;
+  font-size: 18px;
 }
 
 body .noscroll {
@@ -96,11 +98,12 @@ a[href*="babysteps-cloud"] {
 /* Button Styles */
 .btn-blue-outline, .btn-dark, .btn-blue, .btn {
   display: inline-block;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 1.8rem;
   transition: all 0.3s;
   border-radius: 3px;
   border: none;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .btn-blue {
@@ -132,7 +135,8 @@ a[href*="babysteps-cloud"] {
 }
 
 .btn-small {
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.3rem;
+  font-size: 16px;
 }
 
 /* Back to Top Button */
@@ -181,6 +185,7 @@ a[href*="babysteps-cloud"] {
   display: inline-block;
   width: auto;
   padding: 0;
+  font-size: 17px;
 }
 
 #nav > .container.nav-container {
@@ -318,14 +323,14 @@ header .hero h2 span {
   letter-spacing: 2px;
   white-space: nowrap;
   text-align: center;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: bold;
 }
 
 header .hero p {
   color: #dcdcdc;
-  line-height: 1.6;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.7;
+  font-size: clamp(1.5rem, 2.5vw, 1.8rem);
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
@@ -351,6 +356,7 @@ header .hero .hero-btns {
 .projects h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 .project-grid {
@@ -374,15 +380,17 @@ header .hero .hero-btns {
 
 .project-card h3 {
   margin-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 
 .project-card .text-grey em {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .project-card .made-with {
   margin: 1rem 0 0.5rem;
   font-weight: bold;
+  font-size: 1.1rem;
 }
 
 .project-card .tech-stack-list {
@@ -393,7 +401,7 @@ header .hero .hero-btns {
 }
 
 .project-card .tech-stack-list li {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-right: 0.75rem;
 }
 
@@ -401,6 +409,7 @@ header .hero .hero-btns {
   list-style: disc inside;
   margin-bottom: 1rem;
   padding-left: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .project-card .project-links {
@@ -420,11 +429,14 @@ header .hero .hero-btns {
 #experience h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 #experience .timeline {
   position: relative;
-  margin: 2rem 0;
+  margin: 2rem auto;
+  max-width: 1000px;
+  padding: 2rem 0;
 }
 
 #experience .timeline::before {
@@ -433,109 +445,190 @@ header .hero .hero-btns {
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  width: 2px;
+  width: 4px;
   height: 100%;
-  background: #ccc;
+  background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 2px;
 }
 
 #experience .timeline-item {
-  margin: 4rem 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   position: relative;
-}
-
-#experience .timeline-item .timeline-icon {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  border: 2px solid #3b82f6;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  margin-bottom: 4rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #3b82f6;
+  width: 100%;
+}
+
+#experience .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  background: #3b82f6;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
   z-index: 2;
-  transition: transform 0.3s;
+  border: 4px solid white;
+  box-shadow: 0 0 0 3px #3b82f6;
 }
 
-#experience .timeline-item .timeline-icon:hover {
-  transform: translate(-50%, -50%) scale(1.2);
+/* Left side items (odd) */
+#experience .timeline-item:nth-child(odd) {
+  justify-content: flex-start;
 }
 
-#experience .timeline-item .timeline-content,
-#experience .timeline-item .timeline-date {
+#experience .timeline-item:nth-child(odd) .timeline-card {
+  margin-right: 52%;
+  text-align: left;
+}
+
+#experience .timeline-item:nth-child(odd) .timeline-card .timeline-date {
+  text-align: left;
+}
+
+#experience .timeline-item:nth-child(odd) .timeline-card h3 {
+  text-align: left;
+}
+
+#experience .timeline-item:nth-child(odd) .timeline-card .company {
+  text-align: left;
+}
+
+#experience .timeline-item:nth-child(odd) .timeline-card ul {
+  text-align: left;
+}
+
+#experience .timeline-item:nth-child(odd) .timeline-card::before {
+  content: "";
+  position: absolute;
+  right: -15px;
+  top: 2rem;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 15px solid white;
+}
+
+/* Right side items (even) */
+#experience .timeline-item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+#experience .timeline-item:nth-child(even) .timeline-card {
+  margin-left: 52%;
+  text-align: left;
+}
+
+#experience .timeline-item:nth-child(even) .timeline-card::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 2rem;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-right: 15px solid white;
+}
+
+#experience .timeline-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
   width: 45%;
-  background: #f5f5f5;
-  padding: 1rem;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  max-width: 450px;
 }
 
-#experience .timeline-item .timeline-content:hover,
-#experience .timeline-item .timeline-date:hover {
-  transform: translateY(-5px);
+#experience .timeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-#experience .timeline-item:nth-child(odd) .timeline-content {
-  order: 1;
-  text-align: left;
+#experience .timeline-date {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
-#experience .timeline-item:nth-child(odd) .timeline-date {
-  order: 3;
-  text-align: right;
-}
-
-#experience .timeline-item:nth-child(even) .timeline-date {
-  order: 1;
-  text-align: left;
-}
-
-#experience .timeline-item:nth-child(even) .timeline-content {
-  order: 3;
-}
-
-#experience .timeline-content h4 {
+#experience .timeline-card h3 {
+  color: #1f2937;
+  font-size: 1.4rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+#experience .timeline-card .company {
+  color: #3b82f6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#experience .timeline-card .role {
+  color: #6b7280;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+#experience .timeline-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#experience .timeline-card li {
+  position: relative;
+  margin-bottom: 0.8rem;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Left side bullet points */
+#experience .timeline-item:nth-child(odd) .timeline-card li {
+  padding-left: 1.5rem;
+  padding-right: 0;
+}
+
+#experience .timeline-item:nth-child(odd) .timeline-card li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
   font-weight: bold;
 }
 
-#experience .timeline-content h4 small {
-  display: block;
-  font-weight: normal;
-  color: #555;
-  margin-top: 0.25rem;
+/* Right side bullet points */
+#experience .timeline-item:nth-child(even) .timeline-card li {
+  padding-left: 1.5rem;
+  padding-right: 0;
 }
 
-#experience .timeline-item .timeline-date {
-  width: auto;
-  display: inline-block;
-  max-width: 40%;
-  padding: 0.5rem 1rem;
-}
-
-#experience .timeline-item:nth-child(odd) .timeline-date {
-  margin-right: 30%;
-}
-
-#experience .timeline-item:nth-child(even) .timeline-date {
-  margin-left: 30%;
-}
-
-#experience .timeline-content {
-  text-align: left !important;
-}
-
-#experience .timeline-content ul {
-  list-style-position: inside;
-  padding-left: 1rem;
+#experience .timeline-item:nth-child(even) .timeline-card li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: bold;
 }
 
 /* Skills Section */
@@ -561,6 +654,7 @@ header .hero .hero-btns {
   text-align: center;
   position: relative;
   left: 0;
+  font-size: 2.5rem;
 }
 
 .skills .skills-icons {
@@ -583,7 +677,7 @@ header .hero .hero-btns {
 
 .skills .skills-icons li {
   margin: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #333 !important;
   display: flex;
   flex-direction: column;
@@ -595,7 +689,7 @@ header .hero .hero-btns {
 
 .skills .skills-icons li span {
   margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #333 !important;
   transition: all 0.3s ease;
 }
@@ -637,6 +731,7 @@ header .hero .hero-btns {
   text-align: center;
   color: black;
   margin-bottom: 3rem;
+  font-size: 2.5rem;
 }
 
 .education .container .education-card {
@@ -687,10 +782,16 @@ header .hero .hero-btns {
 
 .education .container .education-card .education-card-column .card-column-large h4 {
   font-weight: normal;
+  font-size: 1.3rem;
 }
 
 .education .container .education-card .education-card-column .card-column-large ul {
   padding-left: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.education .container .education-card .education-card-column .card-column-large p {
+  font-size: 1.1rem;
 }
 
 .education .container .education-card .education-card-column .card-column-large hr {
@@ -708,6 +809,7 @@ header .hero .hero-btns {
 .contact .section-title {
   margin-bottom: 2rem;
   text-align: center;
+  font-size: 2.5rem;
 }
 
 .contact .card-container {
@@ -728,6 +830,7 @@ header .hero .hero-btns {
   flex-direction: column;
   box-shadow: 0 0.15rem 0.6rem rgba(43, 52, 56, 0.15);
   border-radius: 3px;
+  font-size: 1.1rem;
 }
 
 .contact .card-container .card i {
@@ -743,6 +846,10 @@ header .hero .hero-btns {
 
 .contact .card-container .card > * {
   margin: 0.5rem;
+}
+
+.contact .card-container .card h3 {
+  font-size: 1.3rem;
 }
 
 .contact form {
@@ -765,7 +872,7 @@ header .hero .hero-btns {
   margin: 0.75rem 0;
   border: 1px solid #afafaf;
   padding: 0.75rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .contact form .form-group input:focus,
@@ -815,6 +922,7 @@ header .hero .hero-btns {
   background: #181a1b;
   padding: 1.5rem 0;
   color: white;
+  font-size: 1.1rem;
 }
 
 .footer .footer-flex {
@@ -948,40 +1056,82 @@ header .hero .hero-btns {
     right: -5px;
   }
   
+  #experience .timeline {
+    padding: 2rem 1rem;
+  }
+  
   #experience .timeline::before {
-    left: 1rem;
+    left: 2rem;
+    transform: none;
   }
   
   #experience .timeline-item {
     display: block;
-    margin: 3rem 0;
-    padding-left: 2.5rem;
+    margin-bottom: 3rem;
+    padding-left: 3rem;
   }
   
-  #experience .timeline-item .timeline-icon {
-    left: 0.5rem;
-    top: 0;
-    transform: translateY(0);
+  #experience .timeline-item::before {
+    left: 1.5rem;
+    transform: none;
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+    box-shadow: 0 0 0 2px #3b82f6;
   }
   
-  #experience .timeline-item .timeline-date,
-  #experience .timeline-item .timeline-content {
-    position: relative;
-    width: auto;
-    display: block;
-    margin: 0.5rem 0;
+  #experience .timeline-item:nth-child(odd),
+  #experience .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+  }
+  
+  #experience .timeline-item:nth-child(odd) .timeline-card,
+  #experience .timeline-item:nth-child(even) .timeline-card {
+    width: 100%;
+    max-width: none;
+    margin: 0;
     text-align: left;
-    padding: 0.75rem 1rem;
   }
   
-  #experience .timeline-item:nth-child(odd) .timeline-content,
-  #experience .timeline-item:nth-child(odd) .timeline-date,
-  #experience .timeline-item:nth-child(even) .timeline-content,
-  #experience .timeline-item:nth-child(even) .timeline-date {
-    order: unset !important;
-    text-align: left !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  #experience .timeline-item:nth-child(odd) .timeline-card::before,
+  #experience .timeline-item:nth-child(even) .timeline-card::before {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 1.5rem;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid white;
+    border-left: none;
+  }
+  
+  #experience .timeline-card {
+    padding: 1.5rem;
+  }
+  
+  #experience .timeline-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  #experience .timeline-card .company {
+    font-size: 1rem;
+  }
+  
+  #experience .timeline-item:nth-child(odd) .timeline-card li {
+    padding-left: 1.5rem;
+    padding-right: 0;
+  }
+  
+  #experience .timeline-item:nth-child(odd) .timeline-card li::before,
+  #experience .timeline-item:nth-child(even) .timeline-card li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    right: auto;
+    color: #3b82f6;
+    font-weight: bold;
   }
 }
 
@@ -995,7 +1145,7 @@ header .hero .hero-btns {
   }
   
   header .hero h1 {
-    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
   }
   
   header nav .nav-links {
@@ -1027,7 +1177,7 @@ header .hero .hero-btns {
 
   .mobile-menu-links a {
     padding: 0.3rem 0.6rem !important;
-    font-size: 0.9rem !important;
+    font-size: 1.2rem !important;
   }
   
   .footer .footer-flex {
@@ -1046,6 +1196,10 @@ header .hero .hero-btns {
   
   .footer .footer-flex .footer-icon-links a {
     margin: 0 1rem;
+  }
+  
+  header .hero p {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
   }
 }
 
