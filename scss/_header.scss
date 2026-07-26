@@ -5,9 +5,16 @@ header {
     position: relative;
   
     #particles-js {
-      height: 80vh;
+      min-height: 80vh;
       position: relative;
-  
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      // top padding clears the fixed nav pill so the hero can never slide under it
+      padding: 8rem 1rem 4rem;
+      box-sizing: border-box;
+
       // Particles.js canvas
       canvas {
         position: absolute;
@@ -101,11 +108,9 @@ header {
     // Hero Section
     .hero {
       z-index: 5;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-  
+      position: relative;
+      width: 100%;
+
       h1,
       p {
         color: $text-color;
@@ -263,9 +268,14 @@ header {
       }
   
       .hero {
-        top: 55%;
+        top: auto;
       }
-  
+
+      #particles-js {
+        // mobile nav is a full-width two-row bar (logo + menu links), so it needs more clearance
+        padding: 10rem 1rem 3rem;
+      }
+
       .socials {
         display: none;
       }
@@ -318,7 +328,7 @@ header {
       min-height: 70vh;
   
       #particles-js {
-        height: 70vh;
+        min-height: 70vh;
       }
     }
   }

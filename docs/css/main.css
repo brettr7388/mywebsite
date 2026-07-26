@@ -8,6 +8,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* keep anchored section headings clear of the fixed nav pill */
+section[id] {
+  scroll-margin-top: 7rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -229,8 +234,15 @@ header {
 }
 
 header #particles-js {
-  height: 80vh;
+  min-height: 80vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* top padding clears the fixed nav pill so the hero can never slide under it */
+  padding: 8rem 1rem 4rem;
+  box-sizing: border-box;
 }
 
 header #particles-js canvas {
@@ -307,10 +319,8 @@ header nav .nav-container .nav-links a {
 /* Hero Section */
 header .hero {
   z-index: 5;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  width: 100%;
 }
 
 header .hero h1,
@@ -642,6 +652,11 @@ header .hero .hero-btns {
 
 .skills canvas {
   display: none !important;
+}
+
+/* text badges sit on saturated tiles, so they keep white text (icon spans excluded) */
+.skills .skills-icons li > div span:not([data-icon]) {
+  color: #fff !important;
 }
 
 .skills .seperator-skew-top,
@@ -1010,9 +1025,14 @@ header .hero .hero-btns {
   }
   
   header .hero {
-    top: 55%;
+    top: auto;
     width: 100%;
     padding: 0 1rem;
+  }
+
+  header #particles-js {
+    /* mobile nav is a full-width two-row bar (logo + menu links), so it needs more clearance */
+    padding: 10rem 1rem 3rem;
   }
   
   header .socials {
@@ -1231,6 +1251,6 @@ header .hero .hero-btns {
   }
   
   header #particles-js {
-    height: 70vh;
+    min-height: 70vh;
   }
 }
