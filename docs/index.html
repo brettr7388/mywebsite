@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brett Rosenberg | Computer Science Major</title>
+    <title>Brett Rosenberg | Software Engineer</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -113,7 +113,7 @@
               Hi, I'm <span class="main-font text-blue">Brett</span> Rosenberg
             </h1>
             <p class="student" id="student">
-              Fourth-year computer science major at the University of Central Florida. Building mobile apps, AI agents, machine learning models, and web projects.
+              Software Engineer at Foundation Health, building AI-powered healthcare tech embedded in Epic. Computer science senior at the University of Central Florida. I build full-stack apps, AI agents, and automation systems.
             </p>
             <div class="hero-btns">
               <a
@@ -134,7 +134,7 @@
                 <i class="fab fa-github"></i> GitHub
               </a>
               <a
-                href="CSResume.pdf"
+                href="RosenbergResume2026.pdf"
                 class="btn-blue-outline"
                 style="background-color: #c41e3a; border-color: #c41e3a; color: #FFFFFF;"
                 target="_blank"
@@ -1100,11 +1100,27 @@
         <h2 class="main-font"><span class="text-blue">Experience</span></h2>
 
         <div class="timeline">
-          <!-- 1. Mobile Developer Intern -->
+          <!-- 0. Foundation Health Software Engineer -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-duration="200">
+            <div class="timeline-card">
+              <div class="timeline-date" style="background: linear-gradient(135deg, #10b981, #059669);">March 2026 - Present</div>
+              <h3>Software Engineer</h3>
+              <div class="company">Foundation Health &mdash; Orlando, FL / Remote</div>
+              <ul>
+                <li>Ship full-stack features across an AI-powered medication refill-authorization platform embedded in Epic (SMART on FHIR, CDS Hooks) &mdash; SvelteKit/TypeScript app, Node.js APIs, Prisma/PostgreSQL, and a Python LangGraph LLM service; 100+ production PRs merged in first 4 months.</li>
+                <li>Designed 20+ deterministic clinical resolvers (lab recency, within-normal-limits, dose duration, controlled substances, brand/generic matching) replacing LLM calls with auditable logic, raising the eval pass rate from 91.5% to 99%.</li>
+                <li>Engineered FHIR ingestion and evidence prioritization: bounded pagination on all bulk fetches, new resource pipelines, and token-budget evidence tuning for LLM prompts.</li>
+                <li>Own GCP infrastructure via Terraform and CircleCI: Cloud SQL with IAM auth, build-migrate-deploy pipelines across four environments, and scheduled Cloud Run jobs; parallelized the PHI redaction service, cutting latency from ~50s to 13s.</li>
+                <li>Hardened security and HIPAA compliance: JKU-issuer binding on CDS Hooks JWT auth, RSA key rotation, and client-side PHI redaction covering patient, pharmacy, and provider identifiers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 1. AI & Mobile Developer Intern -->
           <div class="timeline-item" data-aos="fade-up" data-aos-duration="200">
             <div class="timeline-card">
               <div class="timeline-date" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">June 2025 - December 2025</div>
-              <h3>Mobile Developer Intern</h3>
+              <h3>AI &amp; Mobile Developer Intern</h3>
               <div class="company">Universal Orlando Resort</div>
               <ul>
                 <li>Delivered the AI‑105 triage system to address a ~60% reroute rate in mobile support tickets, enabling accurate classifications, routing decisions and escalation summaries via MCP‑based service routing.</li>
@@ -1273,6 +1289,14 @@
             <span style="color: white; font-size: 16px;">Node.js</span>
           </li>
           <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="iconify" data-icon="logos:postgresql" data-inline="false" style="font-size: 54px; margin-bottom: 8px;"></span>
+            <span style="color: white; font-size: 16px;">PostgreSQL</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="iconify" data-icon="simple-icons:prisma" data-inline="false" style="font-size: 54px; margin-bottom: 8px; color: #5A67D8;"></span>
+            <span style="color: white; font-size: 16px;">Prisma</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <span class="iconify" data-icon="logos:mysql" data-inline="false" style="font-size: 54px; margin-bottom: 8px;"></span>
             <span style="color: white; font-size: 16px;">MySQL</span>
           </li>
@@ -1345,6 +1369,10 @@
             <span style="color: white; font-size: 16px;">Dart</span>
           </li>
           <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="iconify" data-icon="logos:svelte-icon" data-inline="false" style="font-size: 54px; margin-bottom: 8px;"></span>
+            <span style="color: white; font-size: 16px;">SvelteKit</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <span class="iconify" data-icon="logos:flutter" data-inline="false" style="font-size: 54px; margin-bottom: 8px;"></span>
             <span style="color: white; font-size: 16px;">Flutter</span>
           </li>
@@ -1366,6 +1394,20 @@
           <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <span class="iconify" data-icon="simple-icons:googlegemini" data-inline="false" style="font-size: 54px; margin-bottom: 8px; color: #4285F4;"></span>
             <span style="color: white; font-size: 16px;">Gemini</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="iconify" data-icon="simple-icons:anthropic" data-inline="false" style="font-size: 54px; margin-bottom: 8px; color: #D4A574;"></span>
+            <span style="color: white; font-size: 16px;">Claude</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="iconify" data-icon="simple-icons:langchain" data-inline="false" style="font-size: 54px; margin-bottom: 8px; color: #1C3C3C; background-color: #FFFFFF; border-radius: 8px;"></span>
+            <span style="color: white; font-size: 16px;">LangGraph</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background-color: #6C5CE7; border-radius: 8px; margin-bottom: 8px;">
+              <span style="color: white; font-weight: bold; font-size: 12px;">MCP</span>
+            </div>
+            <span style="color: white; font-size: 16px;">MCP</span>
           </li>
           <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <span class="iconify" data-icon="simple-icons:n8n" data-inline="false" style="font-size: 54px; margin-bottom: 8px; color: #FF6D5A;"></span>
@@ -1394,12 +1436,65 @@
         <!-- Separator Line -->
         <hr style="border: none; height: 1px; background-color: #444; margin: 40px 0;" />
 
+        <!-- Healthcare Tech -->
+        <div style="display: flex; align-items: center; background: linear-gradient(135deg, #10b981, #059669); padding: 12px 20px; border-radius: 8px; margin-bottom: 20px;" data-aos="fade-up">
+          <span class="iconify" data-icon="mdi:heart-pulse" data-inline="false" style="font-size: 28px; color: #FFFFFF; margin-right: 15px;"></span>
+          <h3 class="text-white" style="margin: 0; font-size: 28px;">Healthcare Tech</h3>
+        </div>
+        <ul class="skills-icons" style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 30px; margin-bottom: 30px;">
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background-color: #E8452C; border-radius: 8px; margin-bottom: 8px;">
+              <span style="color: white; font-weight: bold; font-size: 12px;">FHIR</span>
+            </div>
+            <span style="color: white; font-size: 16px;">HL7 FHIR</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background-color: #2563EB; border-radius: 8px; margin-bottom: 8px;">
+              <span style="color: white; font-weight: bold; font-size: 10px;">SMART</span>
+            </div>
+            <span style="color: white; font-size: 16px;">SMART on FHIR</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background-color: #7C3AED; border-radius: 8px; margin-bottom: 8px;">
+              <span style="color: white; font-weight: bold; font-size: 12px;">CDS</span>
+            </div>
+            <span style="color: white; font-size: 16px;">CDS Hooks</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background-color: #B91C1C; border-radius: 8px; margin-bottom: 8px;">
+              <span style="color: white; font-weight: bold; font-size: 12px;">Epic</span>
+            </div>
+            <span style="color: white; font-size: 16px;">Epic Integration</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; background-color: #0F766E; border-radius: 8px; margin-bottom: 8px;">
+              <span style="color: white; font-weight: bold; font-size: 11px;">HIPAA</span>
+            </div>
+            <span style="color: white; font-size: 16px;">HIPAA / PHI</span>
+          </li>
+        </ul>
+
+        <!-- Separator Line -->
+        <hr style="border: none; height: 1px; background-color: #444; margin: 40px 0;" />
+
         <!-- DevOps -->
         <div style="display: flex; align-items: center; background: linear-gradient(135deg, #3b82f6, #1d4ed8); padding: 12px 20px; border-radius: 8px; margin-bottom: 20px;" data-aos="fade-up">
           <span class="iconify" data-icon="simple-icons:kubernetes" data-inline="false" style="font-size: 28px; color: #326CE5; margin-right: 15px;"></span>
           <h3 class="text-white" style="margin: 0; font-size: 28px;">DevOps</h3>
         </div>
         <ul class="skills-icons" style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 30px; margin-bottom: 30px;">
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="iconify" data-icon="logos:google-cloud" data-inline="false" style="font-size: 54px; margin-bottom: 8px;"></span>
+            <span style="color: white; font-size: 16px;">Google Cloud</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="iconify" data-icon="logos:terraform-icon" data-inline="false" style="font-size: 54px; margin-bottom: 8px;"></span>
+            <span style="color: white; font-size: 16px;">Terraform</span>
+          </li>
+          <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <span class="iconify" data-icon="simple-icons:circleci" data-inline="false" style="font-size: 54px; margin-bottom: 8px; color: #FFFFFF;"></span>
+            <span style="color: white; font-size: 16px;">CircleCI</span>
+          </li>
           <li data-aos="fade-up" data-aos-duration="300" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             <span class="iconify" data-icon="logos:docker" data-inline="false" style="font-size: 54px; margin-bottom: 8px;"></span>
             <span style="color: white; font-size: 16px;">Docker</span>
