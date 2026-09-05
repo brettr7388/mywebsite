@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Published Research | Brett Rosenberg</title>
+    <meta
+      name="description"
+      content="Brett Rosenberg's research work: co-author on an AACE 2025 conference publication with the University of Central Florida and AdventHealth Translational Research Institute, using machine learning to predict hypoglycemic events in older adults with Type 1 Diabetes."
+    />
+    <link rel="canonical" href="https://brettrosenbergdev.com/research.html" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Published Research | Brett Rosenberg" />
+    <meta
+      property="og:description"
+      content="Co-author, AACE 2025 publication: machine learning for predicting hypoglycemic events in older adults with Type 1 Diabetes, with UCF and AdventHealth Translational Research Institute."
+    />
+    <meta property="og:url" content="https://brettrosenbergdev.com/research.html" />
+    <meta property="og:image" content="https://brettrosenbergdev.com/img/research/aace2025-poster.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "Assessing the Severity of Hypoglycemia and Recovery Time to Normoglycemia in Older Adults with Type 1 Diabetes using CGM data: Machine Learning Insights from the WISDM Study",
+        "author": [
+          { "@type": "Person", "name": "Anika Bilal" },
+          { "@type": "Person", "name": "Annie Wu" },
+          { "@type": "Person", "name": "Angel Arguetta" },
+          { "@type": "Person", "name": "Brett Rosenberg" },
+          { "@type": "Person", "name": "Yury O. Nunez Lopez" },
+          { "@type": "Person", "name": "Richard Pratley" },
+          { "@type": "Person", "name": "Anna Casu" }
+        ],
+        "about": "Machine learning prediction of hypoglycemia severity and recovery time in older adults with Type 1 Diabetes",
+        "isPartOf": {
+          "@type": "Event",
+          "name": "AACE 2025",
+          "location": "Orlando, FL"
+        }
+      }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600;700;800;900&display=swap"
+    />
+
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS animations -->
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <style>
+      /* Research page content, built on top of the site's existing card language */
+      html, body {
+        background: white;
+      }
+      .research-topbar {
+        position: fixed;
+        top: 1.5rem;
+        left: 1.5rem;
+        z-index: 50;
+      }
+      .research-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #3b82f6;
+        font-weight: 700;
+        font-size: 1.15rem;
+        background: white;
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+      }
+      .research-section {
+        background: white;
+        padding: 4.5rem 1.5rem 5rem;
+      }
+      .research-container {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      .research-title {
+        text-align: center;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        margin: 1.5rem 0 0.75rem;
+      }
+      .title-bar {
+        width: 64px;
+        height: 4px;
+        background: #3b82f6;
+        border-radius: 2px;
+        margin: 0 auto 2.5rem;
+      }
+      .research-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e5e7eb;
+        margin-bottom: 2.5rem;
+      }
+      .poster-wrap {
+        width: calc(100% + 4rem);
+        margin: -2rem -2rem 0.75rem;
+        border-radius: 12px 12px 0 0;
+        overflow: hidden;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .research-card img.poster-img {
+        width: 100%;
+        display: block;
+        cursor: zoom-in;
+      }
+      .poster-overlay {
+        padding: 1.25rem 1.5rem;
+        background: #111827;
+      }
+      .overlay-bar {
+        display: block;
+        width: 40px;
+        height: 4px;
+        background: #3b82f6;
+        border-radius: 2px;
+        margin-bottom: 0.6rem;
+      }
+      .research-card .overlay-blurb {
+        color: white;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      @media (max-width: 600px) {
+        .research-card .overlay-blurb {
+          font-size: 0.8rem;
+          line-height: 1.4;
+        }
+        .poster-overlay {
+          padding: 1rem 1.25rem;
+        }
+      }
+      .poster-hint {
+        text-align: center;
+        color: #9ca3af;
+        font-size: 0.85rem;
+        margin: 0 0 1.5rem;
+      }
+      .img-lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.92);
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+      }
+      .img-lightbox.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .lightbox-viewport {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: grab;
+      }
+      .lightbox-viewport img {
+        max-width: 92vw;
+        max-height: 92vh;
+        border-radius: 4px;
+        transform-origin: center center;
+        transition: transform 0.05s linear;
+        user-select: none;
+      }
+      .lightbox-hint {
+        position: absolute;
+        top: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #d1d5db;
+        font-size: 0.9rem;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 0.4rem 1rem;
+        border-radius: 999px;
+        pointer-events: none;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 1rem;
+        right: 1.25rem;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: none;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        font-size: 1.1rem;
+        cursor: pointer;
+        z-index: 2;
+      }
+      .lightbox-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      .research-tag {
+        display: inline-block;
+        background: rgba(59, 130, 246, 0.12);
+        color: #1d4ed8;
+        border-radius: 999px;
+        padding: 0.3rem 0.9rem;
+        font-size: 0.85rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .research-tag.related {
+        background: #f3f4f6;
+        color: #6b7280;
+      }
+      .research-card h2 {
+        color: #1f2937;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+      }
+      .research-card .meta {
+        color: #6b7280;
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+      .research-card .authors {
+        color: #374151;
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+      }
+      .research-card .authors b {
+        color: #1d4ed8;
+      }
+      .research-card p {
+        color: #374151;
+        font-size: 1.05rem;
+        line-height: 1.75;
+        margin-bottom: 1rem;
+      }
+      .research-card a.ext {
+        color: #3b82f6;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body style="background: white;">
+    <div class="research-topbar">
+      <a href="index.html" class="research-back"
+        ><i class="fas fa-arrow-left"></i> Home</a
+      >
+    </div>
+
+    <section class="research-section">
+      <div class="research-container">
+        <h1 class="research-title main-font">
+          <span class="text-blue">Published Research</span>
+        </h1>
+        <div class="title-bar"></div>
+
+        <div class="research-card">
+          <div class="poster-wrap">
+            <div class="poster-overlay">
+              <span class="overlay-bar"></span>
+              <p class="overlay-blurb">
+                Machine learning with UCF and AdventHealth, predicting
+                hypoglycemic events in Type 1 Diabetes.
+              </p>
+            </div>
+            <img
+              class="poster-img"
+              src="img/research/aace2025-poster.jpg"
+              alt="AACE 2025 conference poster: Assessing the Severity of Hypoglycemia and Recovery Time to Normoglycemia in Older Adults with Type 1 Diabetes using CGM data, Machine Learning Insights from the WISDM Study, authored by A. Bilal, A. Wu, A. Arguetta, B. Rosenberg, Y. Nunez-Lopez, R. Pratley, and A. Casu"
+              onclick="openLightbox()"
+            />
+          </div>
+          <p class="poster-hint">Click the poster to zoom in and read it</p>
+          <span class="research-tag">Published: conference co-author</span>
+          <h2>Undergraduate CS Department Researcher | Co-Author, AACE 2025 Publication</h2>
+          <div class="meta">
+            AACE 2025 &middot; Orlando, FL &middot; University of Central
+            Florida &amp; AdventHealth Translational Research Institute
+            &middot; May 2024 to May 2025
+          </div>
+          <p>
+            For a year, I worked as a research assistant in a UCF Computer
+            Science lab partnered with AdventHealth, trying to predict when a
+            person with Type 1 Diabetes is about to have a hypoglycemic
+            event, and how severe and how long it will last. I built the data
+            pipeline in Python with pandas and NumPy, then trained and
+            compared linear regression, decision trees, random forest, and
+            XGBoost models with scikit-learn to see which one actually
+            predicted these events best.
+          </p>
+          <p>
+            Most of the real work was in the data. I wrote scripts to load,
+            clean, and organize more than 10,000 patient records from Type 1
+            Diabetes patients, then pulled out the features that mattered:
+            continuous glucose monitor and blood glucose meter readings,
+            glucose variability, the rate of change in blood sugar, and
+            insulin dosage patterns. Getting those features right made a
+            bigger difference to the models than almost anything else I
+            tried. After a lot of tuning, I got the error on our best model
+            down to 6.02.
+          </p>
+          <p>
+            I met weekly with a research partner and a research professor to
+            plan the next steps and review the code, and I worked directly
+            with endocrinologists and diabetes specialists at AdventHealth to
+            turn the raw numbers into charts and findings a doctor could
+            actually use. That work became a poster, "Assessing the Severity
+            of Hypoglycemia and Recovery Time to Normoglycemia in Older
+            Adults with Type 1 Diabetes using CGM data: Machine Learning
+            Insights from the WISDM Study," which I co-authored with Anika
+            Bilal, Annie Wu, Angel Arguetta, Yury Nunez-Lopez, Richard
+            Pratley, and Anna Casu, and which we presented at AACE 2025 in
+            Orlando.
+          </p>
+          <p>
+            <a
+              class="ext"
+              href="https://www.linkedin.com/posts/anika-bilal-811887124_aace2025-adventhealthresearchinstitute-activity-7329546488362004480-Le5k"
+              target="_blank"
+              rel="noopener"
+              >See the original poster presentation on LinkedIn</a
+            >
+          </p>
+        </div>
+
+        <div class="research-card">
+          <span class="research-tag related">Foundational research</span>
+          <h2>
+            Machine learning prediction of severity and duration of
+            hypoglycemic events in type 1 diabetes patients
+          </h2>
+          <div class="meta">
+            FLAIRS-37, 2024 &middot; Earlier published paper from the same lab
+          </div>
+          <p class="authors">
+            Written by <b>Annie S. Wu, Eashan Singh, Ivy Zhang, Anika Bilal,
+            Anna Casu, and Richard Pratley</b>, published before I joined the
+            project.
+          </p>
+          <p>
+            When I joined the lab, this was the paper I was handed to get up
+            to speed, the first model built to predict hypoglycemic event
+            severity and duration across the general Type 1 Diabetes
+            population. Our AACE 2025 poster grew out of it, taking the same
+            basic approach and applying it specifically to older adults using
+            the WISDM study data. I wanted it here so the research reads as a
+            straight line: this is where the project started, and the poster
+            above is where I picked it up and took it further.
+          </p>
+          <p>
+            <a
+              class="ext"
+              href="https://journals.flvc.org/FLAIRS/article/view/135600/139960"
+              target="_blank"
+              rel="noopener"
+              >Read the published paper</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="footer-flex">
+          <img src="img/BrettLogo.jpeg" alt="logo" id="logo-footer" />
+          <div class="footer-icon-links">
+            <a href="https://github.com/brettr7388" target="_blank"
+              ><i class="fab fa-github fa-2x"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/brett-rosenberg7388"
+              target="_blank"
+              ><i class="fab fa-linkedin fa-2x"></i
+            ></a>
+            <a href="mailto:brettr7388@gmail.com"
+              ><i class="fas fa-envelope fa-2x"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="img-lightbox" id="posterLightbox">
+      <button
+        class="lightbox-close"
+        onclick="closeLightbox()"
+        aria-label="Close"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="lightbox-hint">Scroll or pinch to zoom &middot; drag to pan</div>
+      <div class="lightbox-viewport" id="lightboxViewport">
+        <img
+          id="lightboxImg"
+          src="img/research/aace2025-poster.jpg"
+          alt="AACE 2025 poster, enlarged"
+          draggable="false"
+        />
+      </div>
+    </div>
+    <script>
+      (function () {
+        var lightbox = document.getElementById("posterLightbox");
+        var viewport = document.getElementById("lightboxViewport");
+        var img = document.getElementById("lightboxImg");
+        var scale = 1,
+          panX = 0,
+          panY = 0,
+          dragging = false,
+          lastX = 0,
+          lastY = 0;
+
+        function applyTransform() {
+          img.style.transform =
+            "translate(" + panX + "px, " + panY + "px) scale(" + scale + ")";
+        }
+
+        function resetTransform() {
+          scale = 1;
+          panX = 0;
+          panY = 0;
+          applyTransform();
+        }
+
+        window.openLightbox = function () {
+          lightbox.classList.add("active");
+          resetTransform();
+        };
+        window.closeLightbox = function () {
+          lightbox.classList.remove("active");
+        };
+
+        lightbox.addEventListener("click", function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeLightbox();
+        });
+
+        viewport.addEventListener(
+          "wheel",
+          function (e) {
+            if (!lightbox.classList.contains("active")) return;
+            e.preventDefault();
+            var delta = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+            scale = Math.min(6, Math.max(1, scale * delta));
+            if (scale === 1) {
+              panX = 0;
+              panY = 0;
+            }
+            applyTransform();
+          },
+          { passive: false }
+        );
+
+        viewport.addEventListener("mousedown", function (e) {
+          if (scale <= 1) return;
+          dragging = true;
+          lastX = e.clientX;
+          lastY = e.clientY;
+          viewport.style.cursor = "grabbing";
+        });
+        window.addEventListener("mousemove", function (e) {
+          if (!dragging) return;
+          panX += e.clientX - lastX;
+          panY += e.clientY - lastY;
+          lastX = e.clientX;
+          lastY = e.clientY;
+          applyTransform();
+        });
+        window.addEventListener("mouseup", function () {
+          dragging = false;
+          viewport.style.cursor = "";
+        });
+
+        // simple double-tap / double-click to toggle zoom, for mobile
+        viewport.addEventListener("dblclick", function (e) {
+          if (scale > 1) {
+            resetTransform();
+          } else {
+            scale = 2.5;
+            applyTransform();
+          }
+        });
+
+        // touch support: one finger pans, two fingers pinch-zoom
+        var pinchStartDist = 0,
+          pinchStartScale = 1;
+
+        function touchDist(touches) {
+          var dx = touches[0].clientX - touches[1].clientX;
+          var dy = touches[0].clientY - touches[1].clientY;
+          return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        viewport.addEventListener(
+          "touchstart",
+          function (e) {
+            if (e.touches.length === 2) {
+              pinchStartDist = touchDist(e.touches);
+              pinchStartScale = scale;
+            } else if (e.touches.length === 1 && scale > 1) {
+              dragging = true;
+              lastX = e.touches[0].clientX;
+              lastY = e.touches[0].clientY;
+            }
+          },
+          { passive: true }
+        );
+
+        viewport.addEventListener(
+          "touchmove",
+          function (e) {
+            if (e.touches.length === 2) {
+              e.preventDefault();
+              var newDist = touchDist(e.touches);
+              scale = Math.min(
+                6,
+                Math.max(1, pinchStartScale * (newDist / pinchStartDist))
+              );
+              if (scale === 1) {
+                panX = 0;
+                panY = 0;
+              }
+              applyTransform();
+            } else if (e.touches.length === 1 && dragging) {
+              e.preventDefault();
+              panX += e.touches[0].clientX - lastX;
+              panY += e.touches[0].clientY - lastY;
+              lastX = e.touches[0].clientX;
+              lastY = e.touches[0].clientY;
+              applyTransform();
+            }
+          },
+          { passive: false }
+        );
+
+        viewport.addEventListener("touchend", function () {
+          dragging = false;
+        });
+      })();
+    </script>
+  </body>
+</html>
